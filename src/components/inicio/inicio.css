@@ -189,7 +189,7 @@ main {
     cursor: pointer;
     font-size: 14px;
     font-family: var(--fuente-botones);
-    transition: background 0.3s ease;
+    transition:  0.3s ease;
 }
 
 .btn:hover {
