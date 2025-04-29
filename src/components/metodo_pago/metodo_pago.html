@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método de Pago</title>
+    <link rel="stylesheet" href="../inicio/inicio.css" />
+</head>
+
+<body>
+
+   <!-- Jorge solo arregla bien el main... --->
+    <header>
+        <div class="logo">
+            <img src="../../assets/images/ClickBuy.png" alt="ClickBuy Logo" />
+        </div>
+        <div class="nav-left">
+            <div class="buttons">
+                <button class="btn">Dir Envío</button>
+                <select>
+                    <option>Filtro ▼</option>
+                </select>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscador" />
+            <button style="background-color: var(--amarillo)">🔍</button>
+        </div>
+        <div class="nav-right">
+            <div class="buttons">
+                <button class="btn">Iniciar Sesión</button>
+                <button class="btn">Registrar</button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div>Vender</div>
+        <div>Ofertas</div>
+        <div>Tiendas</div>
+        <div>Categorías</div>
+        <div>Promociones</div>
+        <div>Comprar de nuevo</div>
+        <div>Comida</div>
+        <div>Carrito</div>
+    </nav>
+
+    <main>
+        <section class="container">
+            <form action="#">
+                <div class="row">
+           
+                    <div class="col">
+                        <h3 class="title">Dirección de Facturación</h3>
+
+                        <div class="inputBox">
+                            <label for="name">Nombre completo:</label>
+                            <input type="text" id="name" placeholder="Nombre completo" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="address">Dirección:</label>
+                            <input type="text" id="address" placeholder="Dirección" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="city">Ciudad:</label>
+                            <input type="text" id="city" placeholder="Ciudad" required>
+                        </div>
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <label for="state">Estado:</label>
+                                <input type="text" id="state" placeholder="Estado" required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="zip">Código Postal:</label>
+                                <input type="number" id="zip" placeholder="12345" required>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                    <div class="col">
+                        <h3 class="title">Pago</h3>
+
+                        <div class="inputBox">
+                            <label>Tarjetas aceptadas:</label>
+                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240715140014/Online-Payment-Project.webp"
+                                alt="Tarjetas">
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="cardName">Nombre en la tarjeta:</label>
+                            <input type="text" id="cardName" placeholder="Nombre tal como aparece" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="cardNum">Número de tarjeta:</label>
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="19" required>
+                        </div>
+
+                        <div class="flex">
+                            <div class="inputBox">
+                                <label>Mes de expiración:</label>
+                                <select required>
+                                    <option value="">Seleccionar mes</option>
+                                    <option>Enero</option>
+                                    <option>Febrero</option>
+                                    <option>Marzo</option>
+                                    <option>Abril</option>
+                                    <option>Mayo</option>
+                                    <option>Junio</option>
+                                    <option>Julio</option>
+                                    <option>Agosto</option>
+                                    <option>Septiembre</option>
+                                    <option>Octubre</option>
+                                    <option>Noviembre</option>
+                                    <option>Diciembre</option>
+                                </select>
+                            </div>
+
+                            <div class="inputBox">
+                                <label>Año:</label>
+                                <select required>
+                                    <option value="">Seleccionar año</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="inputBox">
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pedido-acciones">
+                    <button type="submit" class="btn">Proceder al pago</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+       
+    </footer>
+
+</body>
+
+</html>
