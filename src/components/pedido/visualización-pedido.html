@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualización de Pedido</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../inicio/inicio.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../assets/images/ClickBuy.png" alt="Imagen de ClickBuy">
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro ▼</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador">
+      <button id="searchButton" style="background-color: var(--amarillo);">🔍</button>
+    </div>
+    <div class="nav-right">
+      <div class="buttons">
+        <button class="btn">Iniciar Sesión</button>
+        <button class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div>Vender</div>
+    <div>Ofertas</div>
+    <div>Tiendas</div>
+    <div>Categorías</div>
+    <div>Promociones</div>
+    <div>Comprar de nuevo</div>
+    <div>Comida</div>
+    <div>Carrito</div>
+  </nav>
+
+  <main>
+    <section class="pedido-container">
+      <div class="pedido-header">
+        <h2>Pedido</h2>
+        <button class="btn">Regresar</button>
+      </div>
+  
+      <div class="bloque">
+        <p><strong>Pedido #:</strong> 123456</p>
+        <p><strong>Fecha de compra:</strong> 27/04/2025</p>
+        <p><strong>Estado:</strong> Enviado</p>
+        <p><strong>Método de pago:</strong> Tarjeta de crédito</p>
+      </div>
+  
+      <div class="bloque">
+        <h3>Dirección de envío</h3>
+        <p>Calle Ejemplo 123, Ciudad, País</p>
+      </div>
+  
+      <div class="bloque pedido-articulos">
+        <h3>Artículos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Artículo</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Producto 1</td>
+              <td>$100</td>
+              <td>2</td>
+              <td>$200</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+      <div class="pedido-acciones">
+        <button class="btn">Ver factura</button>
+      </div>
+    </section>
+  </main>
+
+
+  <footer>
+    © 2025 ClickBuy. Todos los derechos reservados.
+  </footer>
+
+</body>
+
+</html>

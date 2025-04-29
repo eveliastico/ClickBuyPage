@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../inicio/inicio.css"> <!-- Tu CSS unificado -->
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../../assets/images/ClickBuy.png" alt="ClickBuy">
+        </div>
+
+        <div class="nav-left">
+            <div class="buttons">
+                <button class="btn">Dir Envío</button>
+                <select>
+                    <option>Filtro ▼</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscador">
+            <button id="searchButton">🔍</button>
+        </div>
+
+        <div class="nav-right">
+            <div class="buttons">
+                <button class="btn">Iniciar Sesión</button>
+                <button class="btn">Registrar</button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div>Vender</div>
+        <div>Ofertas</div>
+        <div>Tiendas</div>
+        <div>Categorías</div>
+        <div>Promociones</div>
+        <div>Comprar de nuevo</div>
+        <div>Comida</div>
+        <div>Carrito</div>
+    </nav>
+
+    <main>
+        <main>
+            <section class="pedido-container">
+                <div class="pedido-header">
+                    <h2>Agregar producto nuevo</h2>
+                    <button class="btn">Regresar</button>
+                </div>
+
+                <div class="bloque">
+                    <h3>Información del producto</h3>
+
+                    <label for="nombre">Nombre del producto:</label>
+                    <input type="text" id="nombre" class="form-input" placeholder="Ej. Camiseta Oversize">
+
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" class="form-input">
+                        <option disabled selected value="">Selecciona una categoría</option>
+                        <option value="Ropa">Ropa</option>
+                        <option value="Tecnología">Tecnología</option>
+                        <option value="Juguetes">Juguetes</option>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Belleza">Belleza</option>
+                        <option value="Deportes">Deportes</option>
+                    </select>
+
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" class="form-input" rows="3"
+                        placeholder="Describe brevemente el producto"></textarea>
+                </div>
+
+                <div class="bloque">
+                    <h3>Precio y stock</h3>
+
+                    <label for="precio">Precio:</label>
+                    <input type="number" id="precio" class="form-input" placeholder="$0.00">
+
+                    <label for="descuento">Descuento (opcional):</label>
+                    <input type="number" id="descuento" class="form-input" placeholder="Ej. 10">
+
+                    <label for="stock">Stock disponible:</label>
+                    <input type="number" id="stock" class="form-input" placeholder="Cantidad en existencia">
+
+                    <label for="imagen">Imágenes:</label>
+                    <input type="file" id="imagen" class="form-input" accept="image/*">
+
+                    <button id="btnVistaPrevia" class="btn" style="margin-top: 15px;">Vista previa</button>
+                </div>
+
+                <div class="pedido-acciones">
+                    <button class="btn">Guardar</button>
+                    <button class="btn" style="background-color: var(--rojo); margin-left: 10px;">Cancelar</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal oculto -->
+         <!-- Este modal proporcionara una visualizacion previa del producto a publicar, por ahora no funciona pero esta listo para implementarse -->
+        <div id="modalPreview"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); justify-content:center; align-items:center;">
+            <div style="background:white; padding:20px; border-radius:8px; max-width:500px; width:90%;">
+                <h2>Vista Previa del Producto</h2>
+                <p><strong>Nombre:</strong> <span id="previewNombre"></span></p>
+                <p><strong>Categoría:</strong> <span id="previewCategoria"></span></p>
+                <p><strong>Descripción:</strong> <span id="previewDescripcion"></span></p>
+                <p><strong>Precio:</strong> $<span id="previewPrecio"></span></p>
+                <p><strong>Descuento:</strong> <span id="previewDescuento"></span>%</p>
+                <p><strong>Stock:</strong> <span id="previewStock"></span> unidades</p>
+                <div>
+                    <strong>Imagen:</strong><br>
+                    <img id="previewImagen" src="" alt="Imagen del producto" style="max-width:100%; margin-top:10px;">
+                </div>
+                <button class="btn" style="margin-top:20px;" onclick="cerrarModal()">Cerrar</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        © 2025 ClickBuy. Todos los derechos reservados.
+    </footer>
+
+</body>
+
+</html>
