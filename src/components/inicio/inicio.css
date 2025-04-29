@@ -14,31 +14,22 @@
     --fuente-botones: 'Roboto', sans-serif;
 }
 
-/* Reset y estilos globales */
+/* Reset y base */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
+html, body {
+    height: 100%;
     font-family: var(--fuente-general);
     background-color: var(--blanco);
     color: var(--gris-oscuro);
 }
 
-header,
-nav,
-footer,
-aside,
-section,
-main {
-    padding: 10px;
-}
-
-/* Estilos del header */
+/* Header */
 header {
-    position: relative; /* Define el contexto para posicionamiento absoluto */
     background-color: var(--azul-oscuro);
     color: var(--blanco);
     display: flex;
@@ -46,12 +37,7 @@ header {
     justify-content: flex-start;
     gap: 10px;
     padding: 10px 20px;
-}
-
-.search-bar {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
 }
 
 .logo img {
@@ -60,105 +46,76 @@ header {
     margin-left: 5vw;
 }
 
-header .nav-left {
+header .nav-left,
+header .nav-right,
+header .buttons {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaciado entre el logo y los botones */
+    gap: 10px;
 }
 
 header .nav-right {
     margin-left: auto;
 }
 
-header .buttons {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Espaciado entre los botones */
-    margin-left: 1vw;
-}
-
 header input[type="text"] {
     padding: 8px;
-    width: 30vw; /* Ajusta el ancho del buscador */
+    width: 30vw;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
-header button,
-header select {
-    font-family: var(--fuente-botones);
-    padding: 8px;
-    margin: 0;
+.search-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar button {
+    background-color: var(--amarillo);
     border: none;
+    padding: 8px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* Select bonito */
+select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: var(--gris-oscuro);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200l4%204%204-4z%22%20fill%3D%22%232c3e50%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+    min-width: 100px;
     cursor: pointer;
 }
 
-/* Estilos del nav */
+select:focus {
+    outline: none;
+    border-color: var(--amarillo);
+    box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.3);
+}
+
+/* Nav */
 nav {
     background-color: var(--gris-claro);
     display: flex;
     justify-content: space-around;
     font-weight: bold;
     font-family: var(--fuente-botones);
-}
-
-/* Contenedor principal */
-.container {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
-    gap: 10px;
     padding: 10px;
-}
-
-/* Barra de búsqueda */
-.search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.search-bar button {
-    border: none;
-    padding: 0 14px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-family: 'Roboto', sans-serif;
-    width: auto;
-    height: 30px;
-}
-
-/* Aside y main */
-aside {
-    background-color: var(--gris-claro);
-    height: auto;
-}
-
-main {
-    background-color: var(--blanco);
-}
-
-/* Slider */
-.slider {
-    background-color: var(--gris-claro);
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--fuente-titulo);
-    font-size: 1.5em;
-}
-
-/* Productos */
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.product-card {
-    background-color: var(--gris-claro);
-    height: 120px;
 }
 
 /* Footer */
@@ -169,3 +126,122 @@ footer {
     padding: 15px;
     font-family: var(--fuente-general);
 }
+
+/* Container principal */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Main layout */
+main {
+    min-height: calc(100vh - 160px); /* ocupa casi toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blanco);
+}
+
+/* Pedido container (pantallas tipo formulario/tarjeta) */
+.pedido-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: var(--fuente-general);
+}
+
+/* Bloques internos */
+.bloque {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Header de pedido */
+.pedido-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pedido-header h2 {
+    margin: 0;
+    font-family: var(--fuente-titulo);
+    font-size: 24px;
+}
+
+/* Botones generales */
+.btn {
+    background-color: var(--azul-oscuro);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: var(--fuente-botones);
+    transition:  0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--amarillo);
+    color: black;
+}
+
+/* Pedido info */
+.pedido-info p,
+.pedido-envio p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Pedido envío */
+.pedido-envio h3,
+.pedido-articulos h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Tabla artículos */
+.pedido-articulos table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f7f7f7;
+}
+
+.pedido-articulos th,
+.pedido-articulos td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+.pedido-articulos th {
+    background-color: #e1e5ea;
+    font-weight: bold;
+}
+
+/* Acciones de pedido */
+.pedido-acciones {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
