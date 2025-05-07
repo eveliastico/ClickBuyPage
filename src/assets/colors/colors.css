@@ -1,0 +1,33 @@
+:root {
+  /* Colores base */
+  --primario: #3498db;        /* Azul ClickBuy claro */
+  --primario-oscuro: #2c3e50; /* Azul oscuro para gradiente */
+  --secundario: #f1c40f;      /* Amarillo para botones o íconos */
+  --acento: #e74c3c;          /* Rojo para alertas o errores */
+  --btn-hover: #d4ac0d;       /* Hover del amarillo */
+  
+  /* Fondo */
+  --color-fondo: #ecf0f1;     /* Fondo general claro */
+  --color-card: #ffffff;      /* Tarjetas y formularios blancos */
+
+  /* Texto */
+  --texto-claro: #ffffff;
+  --texto-oscuro: #2c3e50;
+  --texto-secundario: #7f8c8d;
+
+  /* Botones con gradiente */
+  --btn-gradiente: linear-gradient(to right, var(--primario), var(--primario-oscuro));
+  --btn-gradiente-hover: linear-gradient(to right, #2980b9, #1a252f);
+
+  /* Bordes y sombras */
+  --borde-suave: #dcdcdc;
+  --sombra: rgba(0, 0, 0, 0.1);
+
+  /* Tipografía */
+  --fuente-principal: 'Segoe UI', 'Roboto', sans-serif;
+  --fuente-titulo: 'Poppins', sans-serif;
+  --fuente-botones: 'Roboto', sans-serif;
+}
+
+
+

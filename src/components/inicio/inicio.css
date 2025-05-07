@@ -1,18 +1,5 @@
-/* Variables globales */
-:root {
-    --azul-oscuro: #2C3E50;
-    --azul-claro: #3498DB;
-    --amarillo: #F1C40F;
-    --gris-claro: #ECF0F1;
-    --gris-oscuro: #34495E;
-    --blanco: #FFFFFF;
-    --verde: #27AE60;
-    --rojo: #E74C3C;
+@import url("../../assets/colors/colors.css");
 
-    --fuente-titulo: 'Poppins', sans-serif;
-    --fuente-general: 'Open Sans', sans-serif;
-    --fuente-botones: 'Roboto', sans-serif;
-}
 
 /* Reset y base */
 * {
@@ -21,17 +8,18 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-    font-family: var(--fuente-general);
-    background-color: var(--blanco);
-    color: var(--gris-oscuro);
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--texto-oscuro);
 }
 
 /* Header */
 header {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
+    background-color: var(--primario);
+    color: var(--texto-claro);
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -61,7 +49,7 @@ header .nav-right {
 header input[type="text"] {
     padding: 8px;
     width: 30vw;
-    border: 1px solid #ccc;
+    border: 1px solid var(--borde-suave);
     border-radius: 6px;
 }
 
@@ -75,7 +63,7 @@ header input[type="text"] {
 }
 
 .search-bar button {
-    background-color: var(--amarillo);
+    background-color: var(--secundario);
     border: none;
     padding: 8px 14px;
     font-size: 18px;
@@ -83,17 +71,15 @@ header input[type="text"] {
     border-radius: 6px;
 }
 
-/* Select bonito */
+/* Select */
 select {
     padding: 8px 12px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--borde-suave);
     border-radius: 6px;
-    background-color: #fff;
-    color: var(--gris-oscuro);
+    background-color: var(--color-card);
+    color: var(--texto-oscuro);
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%200l4%204%204-4z%22%20fill%3D%22%232c3e50%22/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 10px center;
@@ -104,13 +90,13 @@ select {
 
 select:focus {
     outline: none;
-    border-color: var(--amarillo);
+    border-color: var(--secundario);
     box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.3);
 }
 
 /* Nav */
 nav {
-    background-color: var(--gris-claro);
+    background-color: var(--color-card);
     display: flex;
     justify-content: space-around;
     font-weight: bold;
@@ -120,14 +106,23 @@ nav {
 
 /* Footer */
 footer {
-    background-color: var(--azul-oscuro);
-    color: var(--blanco);
+    background-color: var(--primario);
+    color: var(--texto-claro);
     text-align: center;
     padding: 15px;
     font-family: var(--fuente-general);
 }
 
-/* Container principal */
+/* Main */
+main {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-fondo);
+}
+
+/* Layout de formularios / tarjetas */
 .container {
     flex: 1;
     display: flex;
@@ -136,36 +131,24 @@ footer {
     padding: 40px 20px;
 }
 
-/* Main layout */
-main {
-    min-height: calc(100vh - 160px); /* ocupa casi toda la pantalla */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--blanco);
-}
-
-/* Pedido container (pantallas tipo formulario/tarjeta) */
 .pedido-container {
-    background-color: #ffffff;
+    background-color: var(--color-card);
     padding: 40px;
     border-radius: 12px;
     width: 100%;
     max-width: 900px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     font-family: var(--fuente-general);
 }
 
-/* Bloques internos */
 .bloque {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
+    background-color: var(--color-card);
+    border: 1px solid var(--borde-suave);
     border-radius: 8px;
     padding: 20px;
     margin-top: 20px;
 }
 
-/* Header de pedido */
 .pedido-header {
     display: flex;
     justify-content: space-between;
@@ -179,32 +162,31 @@ main {
     font-size: 24px;
 }
 
-/* Botones generales */
+/* Botones */
 .btn {
-    background-color: var(--azul-oscuro);
-    color: white;
+    background-color: var(--primario); /* Azul oscuro por defecto */
+    color: var(--texto-claro); /* Blanco */
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
     font-family: var(--fuente-botones);
-    transition:  0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--amarillo);
-    color: black;
+    background-color: var(--secundario); /* Amarillo al pasar el cursor */
+    color: black; /* Texto negro */
 }
 
-/* Pedido info */
+/* Contenido */
 .pedido-info p,
 .pedido-envio p {
     margin: 8px 0;
     font-size: 16px;
 }
 
-/* Pedido envío */
 .pedido-envio h3,
 .pedido-articulos h3 {
     margin-top: 20px;
@@ -212,7 +194,7 @@ main {
     font-size: 18px;
 }
 
-/* Tabla artículos */
+/* Tabla */
 .pedido-articulos table {
     width: 100%;
     border-collapse: collapse;
@@ -221,7 +203,7 @@ main {
 
 .pedido-articulos th,
 .pedido-articulos td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--borde-suave);
     padding: 15px;
     text-align: center;
 }
@@ -231,17 +213,17 @@ main {
     font-weight: bold;
 }
 
-/* Acciones de pedido */
 .pedido-acciones {
     margin-top: 25px;
     text-align: center;
 }
 
+/* Inputs */
 .form-input {
     width: 100%;
     padding: 10px;
     margin: 8px 0 15px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--borde-suave);
     border-radius: 6px;
     font-size: 14px;
-  }
+}
