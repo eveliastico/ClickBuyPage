@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat con cliente/vendedor</title>
+  <link rel="stylesheet" href="../chat/chat.css">
+  <link rel="stylesheet" href="chat.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../assets/images/ClickBuy.png" alt="ClickBuy Logo">
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select><option>Filtro ▼</option></select>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador" />
+      <button id="searchButton">🔍</button>
+    </div>
+    <div class="nav-right">
+      <div class="buttons">
+        <button class="btn">Iniciar Sesión</button>
+        <button class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div>Vender</div>
+    <div>Ofertas</div>
+    <div>Tiendas</div>
+    <div>Categorías</div>
+    <div>Promociones</div>
+    <div>Comprar de nuevo</div>
+    <div>Comida</div>
+    <div>Carrito</div>
+  </nav>
+
+  <main class="chat-wrapper">
+
+    <div class="chat-container">
+  
+      <!-- Columna izquierda: Lista de clientes -->
+      <aside class="chat-sidebar">
+        <ul class="chat-contacts">
+          <li class="chat-contact">
+            <img src="../../assets/images/user1.png" alt="User" class="avatar">
+            <span class="contact-name">Cliente 1</span>
+          </li>
+          <li class="chat-contact">
+            <img src="../../assets/images/user2.png" alt="User" class="avatar">
+            <span class="contact-name">Cliente 2</span>
+          </li>
+          <li class="chat-contact">
+            <img src="../../assets/images/user3.png" alt="User" class="avatar">
+            <span class="contact-name">Cliente 3</span>
+          </li>
+          <li class="chat-contact">
+            <img src="../../assets/images/user4.png" alt="User" class="avatar">
+            <span class="contact-name">Cliente 4</span>
+          </li>
+          <li class="chat-contact">
+            <img src="../../assets/images/user5.png" alt="User" class="avatar">
+            <span class="contact-name">Cliente 5</span>
+          </li>
+        </ul>
+      </aside>
+  
+      <!-- Panel del chat (derecha) -->
+      <section class="chat-main">
+  
+        <div class="chat-top">
+          <h2>Chat con cliente/vendedor</h2>
+          <button class="btn">Regresar</button>
+        </div>
+  
+        <div class="chat-content">
+          <div class="message received">¡Hola! Estoy interesado en tu producto.</div>
+          <div class="message sent">Hola, claro. ¿Tienes alguna duda en particular?</div>
+          <div class="message received">¿En qué colores está disponible?</div>
+          <div class="message sent">Negro, azul y rojo. ¿Cuál te interesa?</div>
+        </div>
+  
+        <form class="chat-form">
+          <input type="text" placeholder="Escribe un mensaje..." />
+          <button type="submit">Enviar</button>
+        </form>
+  
+      </section>
+  
+    </div>
+  
+  </main>
+  
+
+  <footer>
+    © 2025 ClickBuy. Todos los derechos reservados.
+  </footer>
+</body>
+
+</html>
