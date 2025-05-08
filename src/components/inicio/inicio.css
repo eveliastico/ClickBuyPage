@@ -227,3 +227,103 @@ main {
     border-radius: 6px;
     font-size: 14px;
 }
+
+/*Modales o dialogs*/
+/*dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}*/
+/*Css de dialog prueba*/
+dialog {
+    position: fixed;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+}
+
+
+dialog::backdrop {
+    position: fixed;
+    background: #22222293;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Animación al abrir un diálogo */
+dialog[open],
+#backdrop {
+    animation: fade-in 250ms forwards;
+}
+
+
+/* Animación al cerrar un diálogo */
+dialog[open].close-animate,
+dialog[open].close-animate {
+    animation: fade-out 250ms forwards;
+}
+
+
+/* Define la animación de desvanecimiento al abrir un diálogo */
+@keyframes fade-in {
+    0% {
+        /* Empieza desde arriba, ligeramente desplazado y completamente transparente */
+        transform: translate(-50%, -10%);
+        opacity: 0;
+    }
+
+
+    100% {
+        /* Termina centrado y completamente visible */
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+
+/* Define la animación de desvanecimiento al cerrar un diálogo */
+@keyframes fade-out {
+    0% {
+        /* Empieza centrado y completamente visible */
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+
+    100% {
+        /* Termina arriba, ligeramente desplazado y completamente transparente */
+        transform: translate(-50%, -10%);
+        opacity: 0;
+        /* Oculta el elemento después de la animación */
+        display: none;
+    }
+}
+/*Cerrar dialog*/
+.close {
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: red;
+}

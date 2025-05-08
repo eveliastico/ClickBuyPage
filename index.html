@@ -33,11 +33,17 @@
         </div>
         <div class="nav-right">
             <div class="buttons">
-                <button onclick="location.href='src/components/auth/Login/login.html'" class="btn">Iniciar Sesión</button>
-                <button onclick="location.href='src/components/auth/Register/registroUsuario.html'" class="btn">Registrar</button>
+                <button onclick="location.href='src/components/auth/Login/login.html'" class="btn" id="loginBtn">Iniciar Sesión</button>
+                <button class="btn" id="registerBtn">Registrar</button>
             </div>
         </div>
     </header>
+    <dialog id="registerModal">
+        <span id="closeModal" class="close">&times;</span>
+        <p id="textModal">Registrate dentro de ClickBuy</p>
+        <button class="btn" id="user" onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como Comprador</button>
+        <button class="btn" id="seller" onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como Vendedor</button>
+    </dialog>
 
     <nav>
         <div>Vender</div>
@@ -69,7 +75,7 @@
     <footer>
         Footer
     </footer>
-
+    <script src="/src/components/inicio/inicio.js"></script>
 </body>
 
 </html>
