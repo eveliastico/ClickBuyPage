@@ -8,18 +8,35 @@ document.addEventListener("DOMContentLoaded", function() {
     //Función que permite iniciar sesión a un usuario
     loginForm.addEventListener("submit", async function(event) {
         event.preventDefault();
-        const email = document.getElementById("email");
-        const password = document.getElementById("psswd");
-        const response = await fetch("http://localhost:3000/usuarios/login", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({email, password})
-        });
-        const data = await response.json();
-        if (response.ok) {
-            if (data.tipoUsuario === "cliente") {
-                window.location.href="../";
+        //Variables que capturan los datos del formlogin del html
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("psswd").value;
+        //Manda los datos al backend
+        try{
+            const response = await fetch("http://localhost:3000/usuarios/login", {
+                //Hay que cambiar el metodo HTTP de login dentro de rutasUsuarios
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({email, password})
+            });
+            //Recibe los datos del backend y verifica que tipo de usuario es
+            const data = await response.json();
+            if (response.ok) {
+                //Guarda el token JWT
+                localStorage.setItem("token", data.token);
+                if (data.tipoUsuario === "cliente") {
+                    window.location.href="/src/components/inicio/inicioCliente/inicioCliente.html";
+                }else if(data.tipoUsuario === "vendedor"){
+                   window.location.href="/src/components/inicio/inicioVendedor/inicioVendedor.html"; 
+                }else {
+                    //Aun falta por agregar el inicio de admin
+                    window.location.href="/src/components/inicio/inicioAdmin/inicioAdmin.html";
+                }
+            }else {
+                console.log("Error: "+ data.error);
             }
+        } catch(error){
+            console.error("Error en el login: ", error);
         }
     });
 
