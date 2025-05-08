@@ -38,13 +38,19 @@
         <span class="store-name">
           <i class="fa-solid fa-store"></i> Tienda: <strong> </strong>
         </span>
-        <button class="btn-config" onclick="abrirModalConfig()">
+        <button id="btnConfig" class="btn-config" onclick="abrirModalConfig()">
           <i class="fa-solid fa-gear"></i> Configuración
         </button>
       </div>
     </div>
   </header>
-
+  <nav id="menuDisplay" class="menuDisplay">
+    <ul class="menu">
+      <li><a href="/src/components/perfiles/perfilVendedor.html">Mi Perfil</a></li>
+      <li><a href="/src/components/pedido/visualización-pedido.html">Mis Productos</a></li>
+      <li><a href="">Configuración</a></li>
+    </ul>
+  </nav>
   <nav>
     <div>Mis Productos</div>
     <div>Pedidos</div>
@@ -72,7 +78,7 @@
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
-
+  <script src="inicioVendedor.js"></script>
 </body>
 
 </html>

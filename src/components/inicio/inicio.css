@@ -338,9 +338,10 @@ dialog[open].close-animate {
     top: 60px;
     right: 20px;
     width: 200px;
-    background-color: #333;
-    border: 1px solid  #ccc;
-    padding: 10px; 
+    background-color: #007eaf;
+    /*border: 1px solid  #ccc;*/
+    padding: 10px;
+    border-radius: 10px; 
 }
 .menuDisplay ul {
     list-style: none;
