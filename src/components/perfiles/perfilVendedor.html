@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Vendedor - ClickBuy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../inicio/inicio.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy">
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador">
+      <button>🔍</button>
+    </div>
+    <div class="nav-right">
+      <div class="buttons">
+        <button class="btn">Iniciar Sesión</button>
+        <button class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div>Mis Productos</div>
+    <div>Pedidos</div>
+    <div>Estadísticas</div>
+    <div>Reseñas</div>
+    <div>Perfil Tienda</div>
+  </nav>
+
+  <main>
+    <section class="pedido-container">
+      <div class="pedido-header">
+        <h2>Edición del perfil de vendedor</h2>
+        <button class="btn">Regresar</button>
+      </div>
+
+      <div class="bloque">
+        <h3>Información de la tienda</h3>
+        <label>Nombre de la tienda:</label>
+        <input type="text" class="form-input" placeholder="Ej: Zapatería El Paso">
+        <label>RFC (opcional):</label>
+        <input type="text" class="form-input" placeholder="RFC de la tienda">
+        <label>Descripción:</label>
+        <textarea class="form-input" placeholder="Ej: Somos una tienda local especializada en calzado cómodo."></textarea>
+      </div>
+
+      <div class="bloque">
+        <h3>Información de contacto</h3>
+        <label>Correo de contacto:</label>
+        <input type="email" class="form-input" placeholder="tienda@ejemplo.com">
+        <label>Teléfono:</label>
+        <input type="tel" class="form-input" placeholder="662-123-4567">
+        <label>Ubicación (Ciudad):</label>
+        <input type="text" class="form-input" placeholder="Ej: Ciudad Obregón, Sonora">
+      </div>
+
+      <div class="bloque">
+        <h3>Actualizar contraseña</h3>
+        <label>Contraseña actual:</label>
+        <input type="password" class="form-input">
+        <label>Nueva contraseña:</label>
+        <input type="password" class="form-input">
+        <label>Confirmar nueva contraseña:</label>
+        <input type="password" class="form-input">
+      </div>
+
+      <div class="bloque">
+        <h3>Logo de la tienda</h3>
+        <input type="file" class="form-input" accept="image/*">
+        <button class="btn" style="margin-top:10px">Actualizar logo</button>
+      </div>
+
+      <div class="pedido-acciones">
+        <button class="btn">Guardar cambios</button>
+        <button class="btn" style="background-color: var(--rojo); margin-left: 10px;">Cancelar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 ClickBuy. Todos los derechos reservados.
+  </footer>
+</body>
+
+</html>
