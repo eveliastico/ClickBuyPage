@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //Variables que capturan los datos del formlogin del html
         const email = document.getElementById("email").value;
         const password = document.getElementById("psswd").value;
-        //Manda los datos al backend
+        /*Hasta conectar con BD se comenta para permitir cargar inicio//Manda los datos al backend
         try{
             const response = await fetch("http://localhost:3000/usuarios/login", {
                 //Hay que cambiar el metodo HTTP de login dentro de rutasUsuarios
@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         } catch(error){
             console.error("Error en el login: ", error);
-        }
+        }*/
+        window.location.href="/src/components/inicio/inicioCliente/inicioCliente.html"
     });
 
 });
