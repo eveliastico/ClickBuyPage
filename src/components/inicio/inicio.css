@@ -164,8 +164,10 @@ main {
 
 /* Botones */
 .btn {
-    background-color: var(--primario); /* Azul oscuro por defecto */
-    color: var(--texto-claro); /* Blanco */
+    background-color: var(--primario);
+    /* Azul oscuro por defecto */
+    color: var(--texto-claro);
+    /* Blanco */
     border: none;
     padding: 8px 16px;
     border-radius: 6px;
@@ -176,8 +178,10 @@ main {
 }
 
 .btn:hover {
-    background-color: var(--secundario); /* Amarillo al pasar el cursor */
-    color: black; /* Texto negro */
+    background-color: var(--secundario);
+    /* Amarillo al pasar el cursor */
+    color: black;
+    /* Texto negro */
 }
 
 /* Contenido */
@@ -354,4 +358,20 @@ dialog[open].close-animate {
 .menuDisplay ul li a:hover {
     background-color: #555;
     border-radius: 5px;
+}
+.btn-config {
+    background: linear-gradient(to right, var(--primario), var(--secundario));
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--fuente-botones);
+    transition: transform 0.2s ease, background 0.3s;
+}
+
+.btn-config:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, var(--secundario), var(--primario));
 }

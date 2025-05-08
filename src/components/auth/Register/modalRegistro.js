@@ -1,5 +1,4 @@
 
-console.log("✅ modalRegistro.js cargado");
 
 class ModalRegistro {
     constructor() {
