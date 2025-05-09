@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio Vendedor - ClickBuy</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
   <link rel="stylesheet" href="../../../assets/colors/colors.css">
   <link rel="stylesheet" href="../inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -36,7 +35,7 @@
     <div class="nav-right">
       <div class="user-info">
         <span class="store-name">
-          <i class="fa-solid fa-store"></i> Tienda: <strong> </strong>
+          <i class="fa-solid fa-store"><strong>&nbsp;&nbsp;</strong></i> Tienda: <strong>&nbsp;</strong>
         </span>
         <button id="btnConfig" class="btn-config" onclick="abrirModalConfig()">
           <i class="fa-solid fa-gear"></i> Configuración
@@ -45,10 +44,10 @@
     </div>
   </header>
   <nav id="menuDisplay" class="menuDisplay">
-    <ul class="menu">
-      <li><a href="/src/components/perfiles/perfilVendedor.html">Mi Perfil</a></li>
-      <li><a href="/src/components/pedido/visualización-pedido.html">Mis Productos</a></li>
-      <li><a href="">Configuración</a></li>
+    <ul class="menuNav">
+      <li class="menuList"><a class="list" href="/src/components/perfiles/perfilVendedor.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis Productos</a></li>
+      <li class="menuList"><a class="list" href="">Configuración</a></li>
     </ul>
   </nav>
   <nav>

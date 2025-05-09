@@ -312,28 +312,38 @@ dialog[open].close-animate {
     position: absolute;
     top: 60px;
     right: 20px;
-    width: 200px;
+    width: 230px;
     background-color: #007eaf;
     /*border: 1px solid  #ccc;*/
     padding: 10px;
     border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #007eaf, #1facc5);
 }
-.menuDisplay ul {
+.menuNav {
     list-style: none;
     padding: 0;
 }
-.menuDisplay ul li {
-    position: relative; 
+.menuList {
+    background: linear-gradient(to left, var(--primario), var(--secundario));
+    transition: transform 0.2s ease, background 0.3s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 10px 0;
 }
-.menuDisplay ul li a {
-    display: block;
-    text-decoration: none;
+.menuList:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to left, var(--secundario), var(--primario));
+}
+.list {
     color: white;
-    padding: 10px; 
-}
-.menuDisplay ul li a:hover {
-    background-color: #555;
-    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    display: block;
+    border-radius: 10px;
+    font-weight: bold;
 }
 .btn-config {
     background: linear-gradient(to right, var(--primario), var(--secundario));
