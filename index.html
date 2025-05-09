@@ -5,12 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
     <link rel="stylesheet" href="src/components/inicio/inicio.css">
     <link rel="stylesheet" href="src/assets/colors/colors.css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -39,10 +37,16 @@
         </div>
     </header>
     <dialog id="registerModal">
-        <span id="closeModal" class="close">&times;</span>
-        <p id="textModal">Registrate dentro de ClickBuy</p>
-        <button class="btn" id="user" onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como Comprador</button>
-        <button class="btn" id="seller" onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como Vendedor</button>
+        <div class="modal-container">
+            <span id="closeModal" class="close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="dialog-container">
+                <h1 id="textModal">Registrate en <span>ClickBuy</span></h1>
+            </div>
+            <div class="button-container">
+                <button class="btnR" id="user" onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como Comprador</button>
+                <button class="btnR" id="seller" onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como Vendedor</button>
+            </div>
+        </div>
     </dialog>
 
     <nav>

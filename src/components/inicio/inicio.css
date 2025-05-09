@@ -1,6 +1,4 @@
 @import url("../../assets/colors/colors.css");
-
-
 /* Reset y base */
 * {
     box-sizing: border-box;
@@ -233,32 +231,18 @@ main {
 }
 
 /*Modales o dialogs*/
-/*dialog {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}*/
 /*Css de dialog prueba*/
 dialog {
-    position: fixed;
+    position: relative;
     border: none;
     border-radius: 15px;
-    outline: none;
     top: 50%;
     left: 50%;
     z-index: 1;
-    padding: 20px;
     background: white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
 }
-
-
 dialog::backdrop {
     position: fixed;
     background: #22222293;
@@ -266,22 +250,16 @@ dialog::backdrop {
     width: 100vw;
     height: 100vh;
 }
-
-
 /* Animación al abrir un diálogo */
 dialog[open],
 #backdrop {
     animation: fade-in 250ms forwards;
 }
-
-
 /* Animación al cerrar un diálogo */
 dialog[open].close-animate,
 dialog[open].close-animate {
     animation: fade-out 250ms forwards;
 }
-
-
 /* Define la animación de desvanecimiento al abrir un diálogo */
 @keyframes fade-in {
     0% {
@@ -290,15 +268,12 @@ dialog[open].close-animate {
         opacity: 0;
     }
 
-
     100% {
         /* Termina centrado y completamente visible */
         transform: translate(-50%, -50%);
         opacity: 1;
     }
 }
-
-
 /* Define la animación de desvanecimiento al cerrar un diálogo */
 @keyframes fade-out {
     0% {
@@ -306,7 +281,6 @@ dialog[open].close-animate {
         transform: translate(-50%, -50%);
         opacity: 1;
     }
-
 
     100% {
         /* Termina arriba, ligeramente desplazado y completamente transparente */
@@ -320,12 +294,13 @@ dialog[open].close-animate {
 .close {
     position: absolute;
     top: 2px;
-    right: 15px;
+    right: 10px;
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
-    color: #333;
+    color: #1773b1;
     transition: color 0.3s ease;
+    border: none;
 }
 
 .close:hover {
@@ -375,4 +350,65 @@ dialog[open].close-animate {
 .btn-config:hover {
     transform: scale(1.05);
     background: linear-gradient(to right, var(--secundario), var(--primario));
+}
+/*Modal dialog*/
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 12px; 
+    overflow: hidden;    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.dialog-container {
+    flex: 1;
+    background: linear-gradient(135deg, #3498db, #85c1e9); 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+ 
+}
+.dialog-container h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: white;
+}  
+.dialog-container h1 span {
+    color: #f1c40f;
+}
+.button-container {
+    background-color: #e1e5ea;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+.btnR {
+    background-color: var(--primario);
+    /* Azul oscuro por defecto */
+    color: var(--texto-claro);
+    /* Blanco */
+    border: none;
+    padding: 12px 38px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: var(--fuente-botones);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 7px;
+    text-align: center;
+
+}
+.btnR:hover {
+    background-color: var(--secundario);
+    /* Amarillo al pasar el cursor */
+    color: black;
+    /* Texto negro */
+    transform: scale(1.05);
 }
