@@ -229,6 +229,41 @@ main {
     border-radius: 6px;
     font-size: 14px;
 }
+/*Diseño metodo de pago*/
+.pago-container {
+    background-color: var(--color-card);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: var(--fuente-general);
+}
+.inputBox{
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    margin: 8px 0 15px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.inputBox input{
+    height: 30px;
+    border: 1px solid var(--borde-suave);
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    width: 50%;
+}
+.pago-form {
+    background: linear-gradient(to bottom, var(--secundario) , #fcfcfc);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding-bottom: 20px; 
+}
 
 /*Modales o dialogs*/
 /*Css de dialog prueba*/
