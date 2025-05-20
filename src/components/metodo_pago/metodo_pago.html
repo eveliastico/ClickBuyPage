@@ -59,7 +59,7 @@
         <section class="pago-container">
             <div class="pedido-header">
                 <h2>Proceder al Pago</h2>
-                <button class="btn">Regresar</button>
+                <button id="back" class="btn" onclick="regresar()">Regresar</button>
             </div>
             <form class="pago-form" action="#">
                 <div class="row">
@@ -95,23 +95,22 @@
                     <div class="bloque">
                         <h3 class="title">Pago</h3>
                         <div class="inputBox">
-                            <label>Tarjetas aceptadas:</label>
-                            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240715140014/Online-Payment-Project.webp"
-                                alt="Tarjetas">
+                            <label for="logoP">Tarjetas aceptadas:</label>
+                            <img id="logoP" class="logoP" src="https://media.geeksforgeeks.org/wp-content/uploads/20240715140014/Online-Payment-Project.webp" alt="Tarjetas">
                         </div>
                         <div class="inputBox">
                             <label for="cardName">Nombre en la tarjeta:</label>
-                            <input type="text" id="cardName" placeholder="Nombre tal como aparece" required>
+                            <input type="text" id="cardName" placeholder="Nombre como aparece en Tarjeta" required>
                         </div>
                         <div class="inputBox">
                             <label for="cardNum">Número de tarjeta:</label>
-                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="19" required>
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="19" oninput="formatoTarjeta(this)">
                         </div>
                         <div class="flex">
                             <div class="inputBox">
                                 <label>Mes de expiración:</label>
-                                <select required>
-                                    <option value="">Seleccionar mes</option>
+                                <select class="selectPago" required>
+                                    <option value="" disabled selected>Seleccionar mes</option>
                                     <option>Enero</option>
                                     <option>Febrero</option>
                                     <option>Marzo</option>
@@ -128,30 +127,32 @@
                             </div>
                             <div class="inputBox">
                                 <label>Año:</label>
-                                <select required>
-                                    <option value="">Seleccionar año</option>
-                                    <option>2024</option>
+                                <select class="selectPago" required>
+                                    <option value="" disabled selected>Seleccionar año</option>
                                     <option>2025</option>
                                     <option>2026</option>
                                     <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
                                 </select>
                             </div>
                         </div>
                         <div class="inputBox">
                             <label for="cvv">CVV:</label>
-                            <input type="number" id="cvv" placeholder="123" required>
+                            <input type="number" id="cvv" placeholder="123" oninput="formatoCVV(this)" required>
                         </div>
                     </div>
                 </div>
                 <div class="pedido-acciones">
-                    <button type="submit" class="btn">Proceder al pago</button>
+                    <button type="submit" id="pago" class="btn">Proceder al pago</button>
                 </div>
             </form>
         </section>
     </main>
-    <script src="index.js"></script>
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
