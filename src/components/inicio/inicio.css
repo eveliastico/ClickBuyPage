@@ -235,7 +235,7 @@ main {
     padding: 20px;
     border-radius: 15px;
     width: 100%;
-    max-width: 1350px;
+    max-width: 1200px;
     font-family: var(--fuente-general);
     background: linear-gradient(to top , var(--primario-oscuro) , var(--color-card));
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
