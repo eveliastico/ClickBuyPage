@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Inicio</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
     <link rel="stylesheet" href="src/components/inicio/inicio.css">
     <link rel="stylesheet" href="src/assets/colors/colors.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -31,7 +32,8 @@
         </div>
         <div class="nav-right">
             <div class="buttons">
-                <button onclick="location.href='src/components/auth/Login/login.html'" class="btn" id="loginBtn">Iniciar Sesión</button>
+                <button onclick="location.href='src/components/auth/Login/login.html'" class="btn" id="loginBtn">Iniciar
+                    Sesión</button>
                 <button class="btn" id="registerBtn">Registrar</button>
             </div>
         </div>
@@ -43,38 +45,285 @@
                 <h1 id="textModal">Registrate en <span>ClickBuy</span></h1>
             </div>
             <div class="button-container">
-                <button class="btnR" id="user" onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como Comprador</button>
-                <button class="btnR" id="seller" onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como Vendedor</button>
+                <button class="btnR" id="user"
+                    onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como
+                    Comprador</button>
+                <button class="btnR" id="seller"
+                    onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como
+                    Vendedor</button>
             </div>
         </div>
     </dialog>
 
-    <nav>
-        <div>Vender</div>
-        <div>Ofertas</div>
-        <div>Tiendas</div>
-        <div>Categorías</div>
-        <div>Promociones</div>
-        <div>Comprar de nuevo</div>
-        <div>Comida</div>
-        <div>Carrito</div>
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="#">Vender</a></li>
+            <li><a href="components/Cliente/ofertas.html">Ofertas</a></li>
+            <li><a href="#">Tiendas</a></li>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Comprar de nuevo</a></li>
+            <li><a href="#">Comida</a></li>
+            <li><a href="#">Carrito</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <aside>Aside</aside>
-        <main>
-            <div class="slider">Slide con productos</div>
-            <div class="products">
-                <div class="product-card"></div>
-                <div class="product-card"></div>
-                <div class="product-card"></div>
-                <div class="product-card"></div>
-                <div class="product-card"></div>
-                <div class="product-card"></div>
+    <!--OFERTAS DEL DIA-->
+    <section class="seccion-productos" style="position: relative;">
+        <div class="encabezado-ofertas">
+            <h2>🔥 Ofertas del día</h2>
+            <span id="reloj">TIEMPO RESTANTE: --:--:--</span>
+        </div>
+        <div class="contenedor-cards scroll-carrusel" id="carrusel">
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/reloj.png" alt="Reloj digital">
+                <p class="titulo">Reloj digital</p>
+                <p class="precio">$129</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Reloj digital', 129)">Agregar al carrito
+                    🛒</button>
             </div>
-        </main>
-        <aside>Aside</aside>
-    </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/cafetera.png" alt="Cafetera instantanea">
+                <p class="titulo">Cafetera instantánea</p>
+                <p class="precio">$249</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Cafetera instantánea', 249)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/audifonos.png" alt="Audífonos Soly">
+                <p class="titulo">Audífonos Soly</p>
+                <p class="precio">$199</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Audífonos Soly', 199)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/laptop.png" alt="Laptop Lenovo">
+                <p class="titulo">Laptop Lenovo</p>
+                <p class="precio">$7,999</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Laptop Lenovo', 7999)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/lampara.png" alt="Lámpara LED">
+                <p class="titulo">Lámpara LED</p>
+                <p class="precio">$349</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Lámpara LED', 349)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/mochila.png" alt="Mochila Antirrobo">
+                <p class="titulo">Mochila Antirrobo</p>
+                <p class="precio">$599</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Mochila Antirrobo', 599)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/silla.png" alt="Silla Gamer">
+                <p class="titulo">Silla Gamer</p>
+                <p class="precio">$3,200</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Silla Gamer', 3200)">Agregar al carrito
+                    🛒</button>
+            </div>
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/tablet.png" alt="Tableta Gráfica">
+                <p class="titulo">Tableta Gráfica</p>
+                <p class="precio">$1,399</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Tableta Gráfica', 1399)">Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/teclado.png" alt="Teclado Mecánico RGB">
+                <p class="titulo">Teclado Mecánico RGB</p>
+                <p class="precio">$899</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Teclado Mecánico RGB', 899)"> Agregar al carrito
+                    🛒</button>
+            </div>
+
+            <div class="card-producto">
+                <img src="src/assets/images/inicio/bocina.png" alt="Parlante Bluetooth">
+                <p class="titulo">Bocina Bluetooth</p>
+                <p class="precio">$549</p>
+                <button class="btn-carrito" onclick="agregarAlCarrito('Parlante Bluetooth', 549)">Agregar al carrito
+                    🛒</button>
+            </div>
+        </div>
+        <button class="flecha-derecha" onclick="moverCarrusel()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="flecha-izquierda" onclick="retrocederCarrusel()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+    </section>
+
+    <!--Categorias -->
+    <section class="seccion-categoria">
+        <div class="categoria-card">
+            <h3>LOOKS VIRALES</h3>
+            <img class="banner" src="src/assets/images/inicio/Categoria1/chica 1.png" class="img-banner"
+                alt="Looks Virales">
+
+            <div class="mini-productos">
+                <img src="src/assets/images/inicio/Categoria1/chica 2.png" alt="Look 1">
+                <img src="src/assets/images/inicio/Categoria1/chica 3.png" alt="Look 2">
+                <img src="src/assets/images/inicio/Categoria1/chica 4.png" alt="Look 3">
+                <img src="src/assets/images/inicio/Categoria1/chica 5.png" alt="Look 4">
+            </div>
+        </div>
+
+        <div class="categoria-card">
+            <h3>HOGAR</h3>
+            <img class="banner" src="src/assets/images/inicio/Categoria2/cocina.png" class="img-banner"
+                alt="Looks Virales">
+
+            <div class="mini-productos">
+                <img src="src/assets/images/inicio/Categoria2/cama.png" alt="Look 1">
+                <img src="src/assets/images/inicio/Categoria2/micro.png" alt="Look 2">
+                <img src="src/assets/images/inicio/Categoria2/sillas.png" alt="Look 3">
+                <img src="src/assets/images/inicio/Categoria2/tv.png" alt="Look 4">
+            </div>
+        </div>
+
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="src/assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+
+            <div class="mini-productos">
+                <img src="src/assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="src/assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="src/assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="src/assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="src/assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+
+            <div class="mini-productos">
+                <img src="src/assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="src/assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="src/assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="src/assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--Relacionados-->
+    <section class="relacionados">
+        <div class="relacionados-encabezado">
+            <h2>Relacionado con los artículos que viste</h2>
+            <a href="#">Ver más</a>
+        </div>
+
+        <div class="relacionados-scroll">
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/CPU.png" alt="Mesa 1">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/Laptop.png" alt="Mesa 2">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+        </div>
+    </section>
+
+    <section class="carrusel-categorias">
+        <h2>Categorías destacadas</h2>
+        <div class="contenedor-categorias">
+            <button class="flecha-categoria izquierda">&#10094;</button>
+            <div class="lista-categorias" id="listaCategorias">
+                <div class="categoria-icono">
+                    <img src="src/assets/images/inicio/CategoriasCarrusel/electronicos.png" alt="Electrónicos">
+                    <p>Electrónicos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/moda.png" alt="Moda"></div>
+                    <p>Moda</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/hogar.png" alt="Hogar"></div>
+                    <p>Hogar</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/belleza.png" alt="Belleza"></div>
+                    <p>Belleza</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/fitness.png" alt="Fitness"></div>
+                    <p>Fitness</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/deportes.png" alt="Deportes"></div>
+                    <p>Deportes</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/images/inicio/CategoriasCarrusel/comida.png" alt="Comida"></div>
+                    <p>Comida</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Juegos"></div>
+                    <p>Juegos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Mascotas"></div>
+                    <p>Mascotas</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Limpieza"></div>
+                    <p>Limpieza</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Basicos"></div>
+                    <p>Basicos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Accesorios"></div>
+                    <p>Accesorios</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="TallasExtras"></div>
+                    <p>Tallas extras</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Electrodomesticos"></div>
+                    <p>Electrodomesticos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Senderismo"></div>
+                    <p>Senderismo</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="src/assets/icons/fitness.png" alt="Oficina"></div>
+                    <p>Oficina</p>
+                </div>
+            </div>
+            <button class="flecha-categoria derecha">&#10095;</button>
+        </div>
+    </section>
 
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.

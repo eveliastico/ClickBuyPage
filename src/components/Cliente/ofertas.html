@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
+    <link rel="stylesheet" href="../inicio/inicio.css">
+    <link rel="stylesheet" href="../colors/colors.css">
+    <link rel="stylesheet" href="../Cliente/productos-cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy" width="120" />
+        </div>
+        <div class="nav-left">
+            <div class="buttons">
+                <button class="btn">Dir Envío</button>
+                <select>
+                    <option>Filtro ▼</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscador">
+            <button id="searchButton" style="background-color: var(--amarillo);">🔍</button>
+        </div>
+        <div class="nav-right">
+            <div class="buttons">
+                <button onclick="location.href='src/components/auth/Login/login.html'" class="btn" id="loginBtn">Iniciar
+                    Sesión</button>
+                <button class="btn" id="registerBtn">Registrar</button>
+            </div>
+        </div>
+    </header>
+
+    <dialog id="registerModal">
+        <div class="modal-container">
+            <span id="closeModal" class="close"><i class="fa-solid fa-xmark"></i></span>
+            <div class="dialog-container">
+                <h1 id="textModal">Registrate en <span>ClickBuy</span></h1>
+            </div>
+            <div class="button-container">
+                <button class="btnR" id="user"
+                    onclick="location.href='src/components/auth/Register/registroUsuario.html'">Registrarte como
+                    Comprador</button>
+                <button class="btnR" id="seller"
+                    onclick="location.href='src/components/auth/Register/RegistroVendedor.html'">Registrarte como
+                    Vendedor</button>
+            </div>
+        </div>
+    </dialog>
+
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas</a></li>
+            <li><a href="#">Categorías</a></li>
+            <li><a href="#">Promociones</a></li>
+            <li><a href="#">Comprar de nuevo</a></li>
+            <li><a href="#">Comida</a></li>
+            <li><a href="#">Carrito</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="titulo-ofertas-global">Ofertas</h1>
+    <main class="contenedor-ofertas">
+        <section class="grid-productos">
+
+            <article class="producto">
+                <img src="../../assets/images/inicio/ofertas/vinil.png" alt="Vinil textil imprimible">
+                <div class="info">
+                    <h3>COLORTEX</h3>
+                    <p class="descripcion">Vinil Textil Imprimible Inkjet A4 10 Pz</p>
+                    <p class="precio-anterior">$562</p>
+                    <p class="precio-descuento">$533.90 <span class="descuento">5% OFF</span></p>
+                    <p class="meses">en 6 meses sin intereses de $88.98</p>
+                    <div class="envio">Llega gratis mañana ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.3 ★★★★☆ (11)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Vinil Textil', 533.90)">Agregar al carrito
+                        🛒</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../../assets/images/inicio/ofertas/perfume.png" alt="Perfume Montblanc">
+                <div class="info">
+                    <h3>MONTBLANC</h3>
+                    <p class="descripcion">Perfume Montblanc Explorer 100 Ml</p>
+                    <p class="precio-anterior">$1,259</p>
+                    <p class="precio-descuento">$919.07 <span class="descuento">27% OFF</span></p>
+                    <p class="meses">en 24 meses de $55.54</p>
+                    <div class="envio">Llega gratis mañana ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.6 ★★★★☆ (350)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Perfume Montblanc', 919.07)">Agregar al
+                        carrito 🛒</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../../assets/images/inicio/ofertas/sticker.png" alt="Sticker Glossy">
+                <div class="info">
+                    <h3>STAMPCOLOUR</h3>
+                    <p class="descripcion">Sticker Inkjet Glossy A4 (25 hojas)</p>
+                    <p class="precio-anterior">$198</p>
+                    <p class="precio-descuento">$99 <span class="descuento">50% OFF</span></p>
+                    <p class="meses">en 24 meses de $5.98</p>
+                    <div class="envio">Llega gratis mañana ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.4 ★★★★☆ (55)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Sticker Glossy A4', 99)">Agregar al carrito
+                        🛒</button>
+                </div>
+            </article>
+
+            <article class="producto mas-vendido">
+                <span class="etiqueta">MÁS VENDIDO</span>
+                <img src="../../assets/images/inicio/ofertas/ventilador.png" alt="Ventilador Torre LASCADO">
+                <div class="info">
+                    <h3>LASCADO</h3>
+                    <p class="descripcion">Ventilador Torre Silencioso Portátil</p>
+                    <p class="precio-anterior">$1,739</p>
+                    <p class="precio-descuento">$869.53 <span class="descuento">50% OFF</span></p>
+                    <p class="meses">en 24 meses de $52.54</p>
+                    <div class="envio">Envío gratis ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.6 ★★★★☆ (51)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Ventilador Torre', 869.53)">Agregar al
+                        carrito 🛒</button>
+                </div>
+            </article>
+
+            <article class="producto mas-vendido">
+                <span class="etiqueta">MÁS VENDIDO</span>
+                <img src="../../assets/images/inicio/ofertas/espejo.png" alt="Espejo LED Tocador">
+                <div class="info">
+                    <h3>GENÉRICO</h3>
+                    <p class="descripcion">Espejo Luz Led De Pared Baño Tocador</p>
+                    <p class="precio-anterior">$1,044</p>
+                    <p class="precio-descuento">$599.90 <span class="descuento">42% OFF</span></p>
+                    <p class="meses">en 24 meses de $36.25</p>
+                    <div class="envio">Envío gratis ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.5 ★★★★☆ (594)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Espejo LED Tocador', 599.90)">Agregar al
+                        carrito 🛒</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../../assets/images/inicio/ofertas/audifonos.png" alt="Audífonos Bluetooth">
+                <div class="info">
+                    <h3>MVPSMART</h3>
+                    <p class="descripcion">2 Pcs Audífonos Bluetooth Compatibles</p>
+                    <p class="precio-anterior">$290</p>
+                    <p class="precio-descuento">$210.97 <span class="descuento">27% OFF</span></p>
+                    <p class="meses">en 24 meses de $12.75</p>
+                    <div class="envio">Envío gratis ⚡ <span>FULL</span></div>
+                    <div class="calificacion">4.5 ★★★★☆ (10572)</div>
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Audífonos Bluetooth', 210.97)">Agregar al
+                        carrito 🛒</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 ClickBuy. Todos los derechos reservados.
+    </footer>
+    <script src="/src/components/inicio/inicio.js"></script>
+</body>
+
+</html>
