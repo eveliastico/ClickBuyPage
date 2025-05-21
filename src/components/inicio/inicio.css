@@ -135,6 +135,7 @@ footer {
     text-align: center;
     padding: 15px;
     font-family: var(--fuente-general);
+    margin-top: auto;/*manda el footer al fondo*/
 }
 
 /* Main */
@@ -279,11 +280,12 @@ main {
 }
 .logoP {
     width: 99%;
+    height: 100%;
     filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3));
 }
 .inputBox input{
     height: 30px;
-    border: 4px solid var(--borde-suave);
+    border: 2px solid var(--borde-suave);
     border-radius: 5px;
     font-size: 16px;
     padding: 10px;
@@ -292,7 +294,7 @@ main {
     transition: all 0.2s ease-in-out;
 }
 .inputBox input:hover {
-    border: 4px solid var(--primario);
+    border: 2px solid var(--primario);
 }
 .inputBox input:focus {
     border: 4px solid var(--primario);
@@ -324,7 +326,7 @@ main {
     width: 20%;
     padding: 8px;
     font-size: 16px;
-    border: 4px solid var(--borde-suave);
+    border: 2px solid var(--borde-suave);
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
 }

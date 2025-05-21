@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +11,6 @@
     <link rel="stylesheet" href="../producto/productos-cliente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
     <header>
         <div class="logo">
@@ -27,7 +24,6 @@
                 </select>
             </div>
         </div>
-
         <div class="search-bar">
             <input type="text" placeholder="Buscador">
             <button id="searchButton" style="background-color: var(--amarillo);">🔍</button>
@@ -40,7 +36,6 @@
             </div>
         </div>
     </header>
-
     <dialog id="registerModal">
         <div class="modal-container">
             <span id="closeModal" class="close"><i class="fa-solid fa-xmark"></i></span>
@@ -57,7 +52,6 @@
             </div>
         </div>
     </dialog>
-
     <nav class="barra-navegacion">
         <ul>
             <li><a href="./ofertas.html">Ofertas</a></li>
@@ -69,8 +63,7 @@
             <li><a href="./carrito.html">Carrito</a></li>
         </ul>
     </nav>
-
-
+    <div class="contenedor">
     <h1 style="text-align:center; margin-top: 20px;">Resumen de compra</h1>
     <section id="carrito-container" class="contenedor-ofertas">
     </section>
@@ -78,7 +71,6 @@
         style="text-align:center; font-size: 1.2rem; color: #777; font-weight: 600; margin-top: 20px; display: none;">
         🛒 Agrega productos a tu carrito
     </p>
-
     <!-- Resumen de compra -->
     <aside id="resumen-compra">
         <h2>Resumen</h2>
@@ -90,12 +82,11 @@
         <button onclick="eliminarCupon()" style="margin-bottom: 10px;">Quitar cupón</button>
         <button id="continuar-compra">Continuar compra</button>
     </aside>
-
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.
     </footer>
+    </div>
+
     <script src="carrito.js"></script>
-
 </body>
-
 </html>

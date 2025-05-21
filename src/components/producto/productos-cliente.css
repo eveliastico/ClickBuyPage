@@ -3,9 +3,14 @@ body {
     background-color: #f5f5f5;
     margin: 0;
     padding: 0;
+    height: 100%;
     /* <- Corregido */
 }
-
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .contenedor-ofertas {
     max-width: 1200px;
     margin: 0 auto;
