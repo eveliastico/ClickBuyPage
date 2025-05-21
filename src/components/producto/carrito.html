@@ -58,7 +58,7 @@
         </div>
     </dialog>
 
-   <nav class="barra-navegacion">
+    <nav class="barra-navegacion">
         <ul>
             <li><a href="./ofertas.html">Ofertas</a></li>
             <li><a href="./tiendas.html">Tiendas</a></li>
@@ -70,30 +70,31 @@
         </ul>
     </nav>
 
-   <!-- Título de sección -->
-  <h1 style="text-align:center; margin-top: 20px;">Resumen de compra</h1>
 
-  <!-- Contenedor de productos -->
-  <section id="carrito-container" class="contenedor-ofertas">
-    <!-- Se llenará dinámicamente desde JS -->
-  </section>
+    <h1 style="text-align:center; margin-top: 20px;">Resumen de compra</h1>
+    <section id="carrito-container" class="contenedor-ofertas">
+    </section>
+    <p id="mensaje-vacio"
+        style="text-align:center; font-size: 1.2rem; color: #777; font-weight: 600; margin-top: 20px; display: none;">
+        🛒 Agrega productos a tu carrito
+    </p>
 
-  <!-- Resumen de compra -->
-  <aside id="resumen-compra">
-    <h2>Resumen</h2>
-    <p>Productos (<span id="cantidad-productos">0</span>): $<span id="total-productos">0.00</span></p>
-    <p>Envío: <span id="envio">Gratis</span></p>
-    <p>Descuento: <span id="descuento-carrito">-$0.00</span></p>
-    <h3>Total a pagar: <span id="total-general">$0.00</span></h3>
-    <p id="cupón-aplicado" style="font-weight: bold; color: green;"></p>
-    <button onclick="eliminarCupon()" style="margin-bottom: 10px;">Quitar cupón</button>
-    <button id="continuar-compra">Continuar compra</button>
-  </aside>
+    <!-- Resumen de compra -->
+    <aside id="resumen-compra">
+        <h2>Resumen</h2>
+        <p>Productos (<span id="cantidad-productos">0</span>): $<span id="total-productos">0.00</span></p>
+        <p>Envío: <span id="envio">Gratis</span></p>
+        <p>Descuento: <span id="descuento-carrito">-$0.00</span></p>
+        <h3>Total a pagar: <span id="total-general">$0.00</span></h3>
+        <p id="cupón-aplicado" style="font-weight: bold; color: green;"></p>
+        <button onclick="eliminarCupon()" style="margin-bottom: 10px;">Quitar cupón</button>
+        <button id="continuar-compra">Continuar compra</button>
+    </aside>
 
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.
     </footer>
-   <script src="carrito.js"></script>
+    <script src="carrito.js"></script>
 
 </body>
 
