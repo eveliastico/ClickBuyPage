@@ -9,6 +9,7 @@ function cargarCarrito() {
   const totalGeneralSpan = document.getElementById('total-general');
   const cuponTexto = document.getElementById('cupón-aplicado');
   const mensajeVacio = document.getElementById('mensaje-vacio'); // <-- Agregado
+  const btnPago = document.getElementById('continuar-compra');
 
   // Limpiar contenido 
   contenedor.innerHTML = '';
@@ -82,6 +83,11 @@ function cargarCarrito() {
   cuponTexto.textContent = cupon
     ? `Cupón aplicado: ${cupon.tipo === 'porcentaje' ? cupon.valor + '% OFF' : '$' + cupon.valor + ' OFF'}`
     : '';
+
+  //Funcion del boton que manda a la pagina de pagar
+  btnPago.addEventListener("click", function (){
+    window.location.href="../metodo_pago/metodo_pago.html";
+  })    
 }
 
 function cambiarCantidad(index, cambio) {

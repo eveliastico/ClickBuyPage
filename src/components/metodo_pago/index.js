@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnConfig = document.getElementById("btnConfig");
     const menuDisplay = document.getElementById("menuDisplay");
     const btnBack = document.getElementById("back");
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const btnPago = document.getElementById('pago');
     //Permite que el boton regrese al menu de cliente
     btnBack.addEventListener("click", ()=> {
         window.location.href="../inicio/inicioCliente/inicioCliente.html";
@@ -14,9 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function(event){
         if (!btnConfig.contains(event.target) && !menuDisplay.contains(event.target)) {
             menuDisplay.style.display = "none";
-        }
+        }    
     });
     
+    btnPago.addEventListener("click", function() {
+        
+        window.location.href="../producto/visualización-pedido.html";
+    });
 });
     function formatoTarjeta(input) {
         //Elimina caracteres y letras

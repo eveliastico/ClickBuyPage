@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const btnBack = document.getElementById("back");
     const pedidos = document.querySelectorAll(".pedido");
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    //Boton de regresar
     btnBack.addEventListener("click", ()=> {
         window.location.href="../inicio/inicioCliente/inicioCliente.html";
     });
@@ -19,4 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href="visualización-pedido.html";
         });
     });
+    //
 });
