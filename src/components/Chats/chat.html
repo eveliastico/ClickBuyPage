@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat con cliente/vendedor</title>
-  <link rel="stylesheet" href="../chat/chat.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
   <link rel="stylesheet" href="chat.css">
 </head>
-
 <body>
   <header>
     <div class="logo">
@@ -33,7 +32,6 @@
       </div>
     </div>
   </header>
-
   <nav>
     <div>Vender</div>
     <div>Ofertas</div>
@@ -44,11 +42,8 @@
     <div>Comida</div>
     <div>Carrito</div>
   </nav>
-
   <main class="chat-wrapper">
-
     <div class="chat-container">
-  
       <!-- Columna izquierda: Lista de clientes -->
       <aside class="chat-sidebar">
         <ul class="chat-contacts">
@@ -74,37 +69,28 @@
           </li>
         </ul>
       </aside>
-  
       <!-- Panel del chat (derecha) -->
       <section class="chat-main">
-  
         <div class="chat-top">
           <h2>Chat con cliente/vendedor</h2>
           <button id="back" class="btn">Regresar</button>
         </div>
-  
         <div class="chat-content">
           <div class="message received">¡Hola! Estoy interesado en tu producto.</div>
           <div class="message sent">Hola, claro. ¿Tienes alguna duda en particular?</div>
           <div class="message received">¿En qué colores está disponible?</div>
           <div class="message sent">Negro, azul y rojo. ¿Cuál te interesa?</div>
         </div>
-  
         <form class="chat-form">
           <input type="text" placeholder="Escribe un mensaje..." />
           <button type="submit">Enviar</button>
         </form>
-  
       </section>
-  
     </div>
-  
   </main>
-
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
   <script src="chat.js"></script>
 </body>
-
 </html>

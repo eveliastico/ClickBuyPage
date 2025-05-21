@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Método de Deposito</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
+    <link rel="stylesheet" href="../inicio/inicio.css" />
+    <link rel="stylesheet" href="../../../assets/colors/colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+   <!-- Jorge solo arregla bien el main... --->
+  <header>
+    <div class="logo">
+        <a href="../inicio/inicioCliente/inicioCliente.html">
+            <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy" width="120" />
+        </a>
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro ▼</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador" />
+      <button id="searchButton">🔍</button>
+    </div>
+    <div class="nav-right">
+     <div class="user-info">
+        <span class="store-name">
+          <i class="fa-solid fa-store"><strong>&nbsp;&nbsp;</strong></i> Tienda: <strong>&nbsp;</strong>
+        </span>
+        <button id="btnConfig" class="btn-config" onclick="abrirModalConfig()">
+          <i class="fa-solid fa-gear"></i> Configuración
+        </button>
+      </div>
+    </div>
+  </header>
+  <nav id="menuDisplay" class="menuDisplay">
+    <ul class="menuNav">
+      <li class="menuList"><a class="list" href="../perfiles/perfilVendedor.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="../metodo_pago/deposito_pago.html">Metodo de Pago</a></li>
+      <li class="menuList"><a class="list" href="../Vendedor/gestion-producto.html"">Mis Productos</a></li>
+      <li class="menuList"><a class="list" href="../Vendedor/creacion-producto.html">Crear Producto</a></li>
+    </ul>
+  </nav>
+    <nav>
+        <div>Vender</div>
+        <div>Ofertas</div>
+        <div>Tiendas</div>
+        <div>Categorías</div>
+        <div>Promociones</div>
+        <div>Comprar de nuevo</div>
+        <div>Comida</div>
+        <div>Carrito</div>
+    </nav>
+    <main>
+        <section class="pago-container">
+            <div class="pedido-header">
+                <h2>Metodo de Deposito</h2>
+                <button id="back" class="btn">Regresar</button>
+            </div>
+            <form class="pago-form" action="#">
+                <div class="row">
+                    <div class="bloque">
+                        <h3 class="title">Dirección de Facturación del Deposito</h3>
+                        <div class="inputBox">
+                            <label for="name">Nombre completo:</label>
+                            <input type="text" id="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="address">Dirección:</label>
+                            <input type="text" id="address" placeholder="Dirección" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="city">Ciudad:</label>
+                            <input type="text" id="city" placeholder="Ciudad" required>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <label for="state">Estado:</label>
+                                <input type="text" id="state" placeholder="Estado" required>
+                            </div>
+                            <div class="inputBox">
+                                <label for="zip">Código Postal:</label>
+                                <input type="number" id="zip" placeholder="12345" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bloque">
+                        <h3 class="title">Metodo de Deposito</h3>
+                        <div class="inputBox">
+                            <label for="logoP">Tarjetas aceptadas:</label>
+                            <img id="logoP" class="logoP" src="https://media.geeksforgeeks.org/wp-content/uploads/20240715140014/Online-Payment-Project.webp" alt="Tarjetas">
+                        </div>
+                        <div class="inputBox">
+                            <label for="cardName">Nombre en la tarjeta:</label>
+                            <input type="text" id="cardName" placeholder="Nombre como aparece en Tarjeta" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="cardNum">Número de tarjeta:</label>
+                            <input type="text" id="cardNum" placeholder="1111-2222-3333-4444" maxlength="19" oninput="formatoTarjeta(this)">
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <label>Mes de expiración:</label>
+                                <select class="selectPago" required>
+                                    <option value="" disabled selected>Seleccionar mes</option>
+                                    <option>Enero</option>
+                                    <option>Febrero</option>
+                                    <option>Marzo</option>
+                                    <option>Abril</option>
+                                    <option>Mayo</option>
+                                    <option>Junio</option>
+                                    <option>Julio</option>
+                                    <option>Agosto</option>
+                                    <option>Septiembre</option>
+                                    <option>Octubre</option>
+                                    <option>Noviembre</option>
+                                    <option>Diciembre</option>
+                                </select>
+                            </div>
+                            <div class="inputBox">
+                                <label>Año:</label>
+                                <select class="selectPago" required>
+                                    <option value="" disabled selected>Seleccionar año</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" placeholder="123" oninput="formatoCVV(this)" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="pedido-acciones">
+                    <button type="submit" id="pago" class="btn">Guardar Tarjeta</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        © 2025 ClickBuy. Todos los derechos reservados.
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
