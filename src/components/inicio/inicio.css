@@ -506,3 +506,10 @@ dialog[open].close-animate {
     /* Texto negro */
     transform: scale(1.05);
 }
+/*Visualizar Pedido*/
+.pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}

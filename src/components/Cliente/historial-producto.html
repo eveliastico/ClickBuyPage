@@ -41,9 +41,10 @@
     </header>
     <nav id="menuDisplay" class="menuDisplay">
         <ul class="menuNav">
-            <li class="menuList"><a class="list" href="/src/components/perfiles/perfilUsuario.html">Mi Perfil</a></li>
-            <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis pedidos</a></li>
-            <li class="menuList"><a class="list" href="">Configuración</a></li>
+      <li class="menuList"><a class="list" href="../../perfiles/perfilUsuario.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="../../Cliente/historial-producto.html">Mis pedidos</a></li>
+      <li class="menuList"><a class="list" href="../../metodo_pago/metodo_pago.html">Metodo de Pago</a></li>
+      <li class="menuList"><a class="list" href="">Por verse</a></li>
         </ul>
     </nav>
     <nav>
@@ -59,24 +60,36 @@
     <main>
         <section class="pedido-container">
             <div class="pedido-header">
-                <h2>Historial de compras</h2>
+                <h2>Historial de Pedidos</h2>
                 <button id="back" class="btn">Regresar</button>
             </div>
             <div class="bloque">
                 <div class="bloque">
-                    <p><strong>Fecha de compra:</strong> 27/04/2025</p>
-                    <p><strong>ID de orden:</strong> ORD123456</p>
-                    <p><strong>Total de compra:</strong> $520.00</p>
+                    <div class="pedido">
+                        <div>
+                            <p><strong>Fecha de compra:</strong> 27/04/2025</p>
+                            <p><strong>ID de orden:</strong> ORD123456</p>
+                            <p><strong>Total de compra:</strong> $520.00</p>   
+                        </div>
+                    </div>
                 </div>
                 <div class="bloque">
-                    <p><strong>Fecha de compra:</strong> 20/04/2025</p>
-                    <p><strong>ID de orden:</strong> ORD123123</p>
-                    <p><strong>Total de compra:</strong> $245.00</p>
+                    <div class="pedido">
+                        <div>
+                            <p><strong>Fecha de compra:</strong> 20/04/2025</p>
+                            <p><strong>ID de orden:</strong> ORD123123</p>
+                            <p><strong>Total de compra:</strong> $245.00</p>    
+                        </div>
+                    </div>
                 </div>
                 <div class="bloque">
-                    <p><strong>Fecha de compra:</strong> 15/04/2025</p>
-                    <p><strong>ID de orden:</strong> ORD789789</p>
-                    <p><strong>Total de compra:</strong> $1,200.00</p>
+                    <div class="pedido">
+                        <div>
+                            <p><strong>Fecha de compra:</strong> 15/04/2025</p>
+                            <p><strong>ID de orden:</strong> ORD789789</p>
+                            <p><strong>Total de compra:</strong> $1,200.00</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

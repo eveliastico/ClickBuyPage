@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    btnBackV = document.getElementById("backV");
-    btnBackU = document.getElementById("backU");
+    const btnBackV = document.getElementById("backV");
+    const btnBackU = document.getElementById("backU");
     
     if (btnBackU) {
         btnBackU.addEventListener("click", ()=> {
