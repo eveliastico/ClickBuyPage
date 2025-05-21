@@ -1,4 +1,5 @@
 @import url("../../assets/colors/colors.css");
+
 /* Reset y base */
 * {
     box-sizing: border-box;
@@ -92,14 +93,39 @@ select:focus {
     box-shadow: 0 0 0 2px rgba(241, 196, 15, 0.3);
 }
 
-/* Nav */
-nav {
-    background-color: var(--color-card);
-    display: flex;
-    justify-content: space-around;
-    font-weight: bold;
-    font-family: var(--fuente-botones);
-    padding: 10px;
+/*Barra de navegacion principal*/
+nav.barra-navegacion {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.barra-navegacion ul {
+  display: flex;
+  justify-content: space-evenly; /* Distribuye todo el ancho */
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.barra-navegacion li {
+  display: inline-block;
+}
+
+.barra-navegacion li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.barra-navegacion li a:hover {
+  color: #FFD700; /* Amarillo al hacer hover */
 }
 
 /* Footer */
@@ -319,6 +345,7 @@ dialog {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transform: translate(-50%, -50%);
 }
+
 dialog::backdrop {
     position: fixed;
     background: #22222293;
@@ -326,16 +353,19 @@ dialog::backdrop {
     width: 100vw;
     height: 100vh;
 }
+
 /* Animación al abrir un diálogo */
 dialog[open],
 #backdrop {
     animation: fade-in 250ms forwards;
 }
+
 /* Animación al cerrar un diálogo */
 dialog[open].close-animate,
 dialog[open].close-animate {
     animation: fade-out 250ms forwards;
 }
+
 /* Define la animación de desvanecimiento al abrir un diálogo */
 @keyframes fade-in {
     0% {
@@ -350,6 +380,7 @@ dialog[open].close-animate {
         opacity: 1;
     }
 }
+
 /* Define la animación de desvanecimiento al cerrar un diálogo */
 @keyframes fade-out {
     0% {
@@ -366,6 +397,7 @@ dialog[open].close-animate {
         display: none;
     }
 }
+
 /*Cerrar dialog*/
 .close {
     position: absolute;
@@ -382,6 +414,7 @@ dialog[open].close-animate {
 .close:hover {
     color: red;
 }
+
 /*Menu desplegable*/
 .menuDisplay {
     display: none;
@@ -392,7 +425,7 @@ dialog[open].close-animate {
     background-color: #007eaf;
     /*border: 1px solid  #ccc;*/
     padding: 10px;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     background: linear-gradient(135deg, #007eaf, #1facc5);
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
@@ -400,14 +433,22 @@ dialog[open].close-animate {
     animation: aparecer 0.4s forwards;
     animation-delay: 0.01s;
 }
+
 @keyframes aparecer {
-    from { opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 .menuNav {
     list-style: none;
     padding: 0;
 }
+
 .menuList {
     background: linear-gradient(to left, var(--primario), var(--secundario));
     transition: transform 0.2s ease, background 0.3s;
@@ -415,10 +456,12 @@ dialog[open].close-animate {
     border-radius: 8px;
     margin: 10px 0;
 }
+
 .menuList:hover {
     transform: scale(1.05);
     background: linear-gradient(to left, var(--secundario), var(--primario));
 }
+
 .list {
     color: white;
     text-decoration: none;
@@ -429,6 +472,7 @@ dialog[open].close-animate {
     border-radius: 10px;
     font-weight: bold;
 }
+
 .btn-config {
     background: linear-gradient(to right, var(--primario), var(--secundario));
     color: white;
@@ -445,35 +489,40 @@ dialog[open].close-animate {
     transform: scale(1.05);
     background: linear-gradient(to right, var(--secundario), var(--primario));
 }
+
 /*Modal dialog*/
 .modal-container {
     display: flex;
     flex-direction: column;
     height: 100%;
-    border-radius: 12px; 
-    overflow: hidden;    
+    border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
+
 .dialog-container {
     flex: 1;
-    background: linear-gradient(135deg, #3498db, #85c1e9); 
+    background: linear-gradient(135deg, #3498db, #85c1e9);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 35px;
- 
+
 }
+
 .dialog-container h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.6rem;
     font-weight: 700;
     color: white;
-}  
+}
+
 .dialog-container h1 span {
     color: #f1c40f;
 }
+
 .button-container {
     background-color: #e1e5ea;
     flex: 1;
@@ -483,6 +532,7 @@ dialog[open].close-animate {
     align-items: center;
     padding: 12px;
 }
+
 .btnR {
     background-color: var(--primario);
     /* Azul oscuro por defecto */
@@ -499,6 +549,7 @@ dialog[open].close-animate {
     text-align: center;
 
 }
+
 .btnR:hover {
     background-color: var(--secundario);
     /* Amarillo al pasar el cursor */
@@ -512,4 +563,458 @@ dialog[open].close-animate {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+.seccion-productos {
+    padding: 30px;
+}
+
+.seccion-productos h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--azul-oscuro);
+}
+
+.contenedor-cards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.card-producto {
+    min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-producto:hover {
+    transform: scale(1.03);
+}
+
+.card-producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.titulo {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.precio {
+    color: var(--amarillo);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.btn-carrito {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: var(--amarillo);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-carrito:hover {
+    background-color: #e2c200;
+}
+
+.encabezado-ofertas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.encabezado-ofertas h2 {
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.encabezado-ofertas #reloj {
+    font-weight: bold;
+    font-size: 1rem;
+    color: gray;
+}
+
+.seccion-productos {
+    padding: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.encabezado-ofertas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.scroll-carrusel {
+    display: flex;
+    overflow-x: auto !important;
+    /* 🔥 esto es lo que desbloquea tu scroll */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+/* 🟨 Contenedor principal con scroll horizontal */
+.scroll-carrusel {
+    display: flex;
+    overflow-x: auto !important;
+    /* 🔥 esto es lo que desbloquea tu scroll */
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+/* ✅ Estilo para el carrusel bonito (scroll personalizado) */
+.scroll-carrusel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-carrusel::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.scroll-carrusel::-webkit-scrollbar-thumb {
+    background-color: var(--amarillo);
+    /* o #FFD700 si no tienes variable */
+    border-radius: 10px;
+}
+
+/* 🛍️ Tarjetas de producto */
+.card-producto {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    min-width: 220px;
+    max-width: 240px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-producto img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card-producto:hover {
+    transform: scale(1.03);
+}
+
+.flecha-derecha,
+.flecha-izquierda {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.flecha-derecha {
+    right: 15px;
+}
+
+.flecha-izquierda {
+    left: 15px;
+}
+
+.flecha-derecha:hover,
+.flecha-izquierda:hover {
+    background-color: var(--amarillo);
+    /* o #FFD700 */
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/** diseño en las categorias y sus imagenes */
+.seccion-categoria {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.categoria-card {
+  width: 320px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+}
+
+.categoria-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.img-banner {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.mini-productos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mini-productos img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mini-productos img:hover {
+  transform: scale(1.05);
+}
+
+.banner {
+  width: 100%;
+  height: 200px; /* o el alto que uses */
+  object-fit: cover;
+  object-position: top; /* <- aquí decides qué parte mostrar */
+  border-radius: 10px;
+}
+
+.relacionados {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.relacionados-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.relacionados-encabezado h2 {
+  font-size: 1.2rem;
+  color: #222;
+  font-weight: bold;
+}
+
+.relacionados-encabezado a {
+  font-size: 0.9rem;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.relacionados-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.relacionados-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.relacionados-scroll::-webkit-scrollbar-thumb {
+  background: var(--amarillo); /* o #ccc */
+  border-radius: 10px;
+}
+
+.item-relacionado {
+  flex: 0 0 auto;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.item-relacionado img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/**Categorias en carrsuel */
+.carrusel-categorias {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.contenedor-categorias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lista-categorias {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.categoria-item {
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.icono {
+  background-color: #092e57;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.categoria-item p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.flecha-categoria {
+  background-color: rgba(0,0,0,0.1);
+  border: none;
+  font-size: 30px;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flecha-categoria.izquierda {
+  left: 0;
+}
+
+.flecha-categoria.derecha {
+  right: 0;
+}
+
+.categoria-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.categoria-item {
+    margin: 0 10px;
+}
+
+.barra-navegacion li a:hover,
+.barra-navegacion li a.activo {
+    background-color: var(--amarillo);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.barra-navegacion ul li a.activo {
+  color: var(--amarillo);
+  font-weight: bold;
+}
+
+.categoria-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.categoria-item {
+    margin: 0 10px;
+}
+
+.categoria-icono {
+  width: 120px;
+  text-align: center;
+  margin: 10px;
+}
+
+.categoria-icono img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--azul-primario);
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.categoria-icono img:hover {
+  transform: scale(1.05);
+}
+
+.categoria-icono p {
+  margin-top: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-texto-oscuro);
 }

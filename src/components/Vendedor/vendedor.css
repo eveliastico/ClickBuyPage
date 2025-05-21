@@ -1,0 +1,107 @@
+.contenedor-tienda {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+/* ========== SECCIÓN INFO TIENDA ========== */
+.perfil-tienda {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #f3f7f9;
+}
+
+.info-tienda {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.banner-tienda {
+  width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.contenedor-info h2 {
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.oficial {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.comentario {
+  margin-bottom: 15px;
+}
+
+.indicadores {
+  display: flex;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+.indicadores div {
+  text-align: center;
+}
+
+.indicadores .valor {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.publicaciones h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.producto-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  width: 180px;
+}
+
+.producto-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.producto-card .nombre {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.producto-card .precio {
+  color: #0aaf00;
+  font-weight: bold;
+}
