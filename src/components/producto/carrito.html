@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
     <link rel="stylesheet" href="../inicio/inicio.css">
     <link rel="stylesheet" href="../colors/colors.css">
-    <link rel="stylesheet" href="../Cliente/productos-cliente.css">
+    <link rel="stylesheet" href="../producto/productos-cliente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -58,37 +58,43 @@
         </div>
     </dialog>
 
-    <nav class="barra-navegacion">
+   <nav class="barra-navegacion">
         <ul>
-            <li><a href="#">Vender</a></li>
-            <li><a href="#">Ofertas</a></li>
-            <li><a href="#">Tiendas</a></li>
+            <li><a href="./ofertas.html">Ofertas</a></li>
+            <li><a href="./tiendas.html">Tiendas</a></li>
             <li><a href="#">Categorías</a></li>
-            <li><a href="#">Promociones</a></li>
+            <li><a href="./promociones.html">Promociones</a></li>
             <li><a href="#">Comprar de nuevo</a></li>
             <li><a href="#">Comida</a></li>
-            <li><a href="#">Carrito</a></li>
+            <li><a href="./carrito.html">Carrito</a></li>
         </ul>
     </nav>
 
-    <h1>Resumen de compra</h1>
+   <!-- Título de sección -->
+  <h1 style="text-align:center; margin-top: 20px;">Resumen de compra</h1>
 
-    <section id="carrito-container">
-        <!-- Los productos se cargarán aquí dinámicamente -->
-    </section>
+  <!-- Contenedor de productos -->
+  <section id="carrito-container" class="contenedor-ofertas">
+    <!-- Se llenará dinámicamente desde JS -->
+  </section>
 
-    <aside id="resumen-compra">
-        <h2>Resumen</h2>
-        <p>Productos (<span id="cantidad-productos">0</span>): $<span id="total-productos">0.00</span></p>
-        <p>Envío: <span id="envio">Gratis</span></p>
-        <h3>Total: $<span id="total-general">0.00</span></h3>
-        <button id="continuar-compra">Continuar compra</button>
-    </aside>
+  <!-- Resumen de compra -->
+  <aside id="resumen-compra">
+    <h2>Resumen</h2>
+    <p>Productos (<span id="cantidad-productos">0</span>): $<span id="total-productos">0.00</span></p>
+    <p>Envío: <span id="envio">Gratis</span></p>
+    <p>Descuento: <span id="descuento-carrito">-$0.00</span></p>
+    <h3>Total a pagar: <span id="total-general">$0.00</span></h3>
+    <p id="cupón-aplicado" style="font-weight: bold; color: green;"></p>
+    <button onclick="eliminarCupon()" style="margin-bottom: 10px;">Quitar cupón</button>
+    <button id="continuar-compra">Continuar compra</button>
+  </aside>
 
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.
     </footer>
-    <script src="/src/components/inicio/inicio.js"></script>
+   <script src="carrito.js"></script>
+
 </body>
 
 </html>

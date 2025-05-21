@@ -77,9 +77,21 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("DOMContentLoaded", verificarActualizacion);
 
     // Función básica de carrito
-    function agregarAlCarrito(nombre, precio) {
-        alert(`¡${nombre} agregado al carrito por $${precio}!`);
+    window.agregarAlCarrito = function(nombre, precio) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        const index = carrito.findIndex(p => p.nombre === nombre);
+        if (index !== -1) {
+            carrito[index].cantidad += 1;
+        } else {
+            carrito.push({ nombre, precio, cantidad: 1 });
+        }
+
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        alert(`🛒 "${nombre}" fue agregado al carrito por $${precio}`);
     }
+
+
 
     function actualizarContadorOfertas() {
         const reloj = document.getElementById("reloj");
@@ -129,13 +141,13 @@ function retrocederCarrusel() {
     carrusel.scrollBy({ left: -cardWidth, behavior: 'smooth' });
 }
 
-  const lista = document.getElementById("listaCategorias");
+const lista = document.getElementById("listaCategorias");
 
-  document.querySelector(".flecha-categoria.izquierda").onclick = () => {
+document.querySelector(".flecha-categoria.izquierda").onclick = () => {
     lista.scrollBy({ left: -150, behavior: "smooth" });
-  };
+};
 
-  document.querySelector(".flecha-categoria.derecha").onclick = () => {
+document.querySelector(".flecha-categoria.derecha").onclick = () => {
     lista.scrollBy({ left: 150, behavior: "smooth" });
-  };
+};
 
