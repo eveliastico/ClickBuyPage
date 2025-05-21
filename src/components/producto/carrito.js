@@ -10,11 +10,11 @@ function cargarCarrito() {
   const cuponTexto = document.getElementById('cupón-aplicado');
   const mensajeVacio = document.getElementById('mensaje-vacio'); // <-- Agregado
 
-  // Limpiar contenido anterior
+  // Limpiar contenido 
   contenedor.innerHTML = '';
 
   if (carrito.length === 0) {
-    mensajeVacio.style.display = 'block'; // Mostrar mensaje vacío
+    mensajeVacio.style.display = 'block';
     cantidadSpan.textContent = 0;
     totalSpan.textContent = '$0.00';
     descuentoSpan.textContent = '-$0.00';

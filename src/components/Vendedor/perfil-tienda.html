@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Tienda</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../inicio/inicio.css">
+  <link rel="stylesheet" href="../vendedor/vendedor.css">
+  <link rel="stylesheet" href="../producto/productos-cliente.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="../../assets/images/ClickBuy.png" alt="ClickBuy Logo">
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro ▼</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador">
+      <button id="searchButton">🔍</button>
+    </div>
+    <div class="nav-right">
+      <div class="buttons">
+        <button class="btn">Iniciar Sesión</button>
+        <button class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="barra-navegacion">
+    <ul>
+      <li><a href="../vendedor/gestion-producto.html">Mis Productos</a>
+      <li><a href="../vendedor/">Pedidos</a></li>
+      <li><a href="#">Estadisticas</a></li>
+      <li><a href="src/components/producto/promociones.html">Reseñas</a></li>
+      <li><a href="../vendedor/perfil-tienda.html">Perfil Tienda</a></li>
+      <li><a href="../vendedor/creacion-producto.html">Crear Producto</a></li>
+    </ul>
+  </nav>
+
+  <main class="perfil-tienda">
+    <section class="info-tienda">
+      <img src="../../assets/images/banner-tienda.png" alt="Banner Tienda" class="banner-tienda">
+
+      <div class="contenedor-info">
+        <h2>B Life</h2>
+        <p class="oficial"><i class="fa-solid fa-circle-check"></i> Tienda oficial de ClickBuy</p>
+        <p><strong>+10 mil</strong> Seguidores • <strong>+100</strong> Productos</p>
+        <p class="categoria">🥇 MercadoLíder Platinum</p>
+        <p class="comentario">¡Uno de los mejores del sitio!</p>
+
+        <div class="indicadores">
+          <div>
+            <p class="valor">+250mil</p>
+            <span>Ventas concretadas</span>
+          </div>
+          <div>
+            <p class="valor"><i class="fa-solid fa-comments"></i></p>
+            <span>Brinda buena atención</span>
+          </div>
+          <div>
+            <p class="valor"><i class="fa-solid fa-clock"></i></p>
+            <span>Entrega sus productos a tiempo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="publicaciones">
+      <h2>Todos los productos</h2>
+      <div class="productos-grid">
+        <div class="producto-card">
+          <img src="../../assets/images/inicio/ofertas/vinil.png" alt="Vinil Textil">
+          <p class="nombre">Vinil Textil</p>
+          <p class="precio">$533.90</p>
+        </div>
+        <div class="producto-card">
+          <img src="../../assets/images/inicio/ofertas/perfume.png" alt="Montblanc">
+          <p class="nombre">Montblanc</p>
+          <p class="precio">$919.07</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 ClickBuy. Todos los derechos reservados.
+  </footer>
+
+</body>
+
+</html>

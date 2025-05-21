@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio Vendedor - ClickBuy</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
+  <title>Inicio Vendedor</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
   <link rel="stylesheet" href="../../../assets/colors/colors.css">
   <link rel="stylesheet" href="../inicio.css">
+  <link rel="stylesheet" href="../vendedor.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -46,17 +48,23 @@
   <nav id="menuDisplay" class="menuDisplay">
     <ul class="menuNav">
       <li class="menuList"><a class="list" href="/src/components/perfiles/perfilVendedor.html">Mi Perfil</a></li>
-      <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis Productos</a></li>
+      <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis Productos</a>
+      </li>
       <li class="menuList"><a class="list" href="">Configuración</a></li>
     </ul>
   </nav>
-  <nav>
-    <div>Mis Productos</div>
-    <div>Pedidos</div>
-    <div>Estadísticas</div>
-    <div>Reseñas</div>
-    <div>Perfil Tienda</div>
-  </nav>
+
+
+    <nav class="barra-navegacion">
+        <ul>
+            <li><a href="../../Vendedor/gestion-producto.html">Mis Productos</a>
+            <li><a href="../../Vendedor/">Pedidos</a></li>
+            <li><a href="#">Estadisticas</a></li>
+            <li><a href="src/components/producto/promociones.html">Reseñas</a></li>
+            <li><a href="../../Vendedor/perfil-tienda.html">Perfil Tienda</a></li>
+             <li><a href="../../Vendedor/creacion-producto.html">Crear Producto</a></li>
+          </ul>
+    </nav>
 
   <div class="container">
     <aside>Aside</aside>
