@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil Vendedor - ClickBuy</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../inicio/inicio.css">
+  <link rel="stylesheet" href="../../../assets/colors/colors.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
   <header>
     <div class="logo">
-      <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy">
+      <a href="../inicio/inicioVendedor/inicioVendedor.html">
+        <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy">      
+      </a>
     </div>
     <div class="nav-left">
       <div class="buttons">
         <button class="btn">Dir Envío</button>
         <select>
-          <option>Filtro</option>
+          <option>Filtro ▼</option>
         </select>
       </div>
     </div>
@@ -27,13 +29,23 @@
       <button>🔍</button>
     </div>
     <div class="nav-right">
-      <div class="buttons">
-        <button class="btn">Iniciar Sesión</button>
-        <button class="btn">Registrar</button>
+      <div class="user-info">
+        <span class="store-name">
+          <i class="fa-solid fa-store"><strong>&nbsp;&nbsp;</strong></i> Tienda: <strong>&nbsp;</strong>
+        </span>
+        <button id="btnConfig" class="btn-config" onclick="abrirModalConfig()">
+          <i class="fa-solid fa-gear"></i> Configuración
+        </button>
       </div>
     </div>
   </header>
-
+  <nav id="menuDisplay" class="menuDisplay">
+    <ul class="menuNav">
+      <li class="menuList"><a class="list" href="/src/components/perfiles/perfilVendedor.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis Productos</a></li>
+      <li class="menuList"><a class="list" href="">Configuración</a></li>
+    </ul>
+  </nav>
   <nav>
     <div>Mis Productos</div>
     <div>Pedidos</div>
@@ -41,14 +53,12 @@
     <div>Reseñas</div>
     <div>Perfil Tienda</div>
   </nav>
-
   <main>
     <section class="pedido-container">
       <div class="pedido-header">
-        <h2>Edición del perfil de vendedor</h2>
-        <button class="btn">Regresar</button>
+        <h2>Editar perfil de vendedor</h2>
+        <button id="backV" class="btn">Regresar</button>
       </div>
-
       <div class="bloque">
         <h3>Información de la tienda</h3>
         <label>Nombre de la tienda:</label>
@@ -58,7 +68,6 @@
         <label>Descripción:</label>
         <textarea class="form-input" placeholder="Ej: Somos una tienda local especializada en calzado cómodo."></textarea>
       </div>
-
       <div class="bloque">
         <h3>Información de contacto</h3>
         <label>Correo de contacto:</label>
@@ -68,7 +77,6 @@
         <label>Ubicación (Ciudad):</label>
         <input type="text" class="form-input" placeholder="Ej: Ciudad Obregón, Sonora">
       </div>
-
       <div class="bloque">
         <h3>Actualizar contraseña</h3>
         <label>Contraseña actual:</label>
@@ -78,23 +86,21 @@
         <label>Confirmar nueva contraseña:</label>
         <input type="password" class="form-input">
       </div>
-
       <div class="bloque">
         <h3>Logo de la tienda</h3>
         <input type="file" class="form-input" accept="image/*">
         <button class="btn" style="margin-top:10px">Actualizar logo</button>
       </div>
-
       <div class="pedido-acciones">
         <button class="btn">Guardar cambios</button>
         <button class="btn" style="background-color: var(--rojo); margin-left: 10px;">Cancelar</button>
       </div>
     </section>
   </main>
-
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
-</body>
-
+  <script src="perfiles.js"></script>
+  <script src="../inicio/inicioVendedor/inicioVendedor.js"></script>
+  </body>
 </html>

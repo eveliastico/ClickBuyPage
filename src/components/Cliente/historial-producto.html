@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de compras</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../../assets/colors/colors.css">
     <link rel="stylesheet" href="../inicio/inicio.css"> <!-- Tu CSS unificado -->
 </head>
-
 <body>
-
     <header>
         <div class="logo">
-            <img src="../../assets/images/ClickBuy.png" alt="ClickBuy Logo">
+            <a href="../inicio/inicioCliente/inicioCliente.html">
+                <img src="../../assets/images/ClickBuy.png" alt="ClickBuy Logo">
+            </a>
         </div>
-
         <div class="nav-left">
             <div class="buttons">
                 <button class="btn">Dir Envío</button>
@@ -24,20 +24,28 @@
                 </select>
             </div>
         </div>
-
         <div class="search-bar">
             <input type="text" placeholder="Buscador">
             <button id="searchButton">🔍</button>
         </div>
-
         <div class="nav-right">
-            <div class="buttons">
-                <button class="btn">Iniciar Sesión</button>
-                <button class="btn">Registrar</button>
+            <div class="user-info">
+                <span class="client-name">
+                    <i class="fa-solid fa-user"><strong>&nbsp;&nbsp;</strong></i>Cliente: <strong>&nbsp;</strong>
+                </span>
+                <button  id="btnConfig" class="btn-config" >
+                    <i class="fa-solid fa-gear"></i> Configuración 
+                </button>
             </div>
         </div>
     </header>
-
+    <nav id="menuDisplay" class="menuDisplay">
+        <ul class="menuNav">
+            <li class="menuList"><a class="list" href="/src/components/perfiles/perfilUsuario.html">Mi Perfil</a></li>
+            <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis pedidos</a></li>
+            <li class="menuList"><a class="list" href="">Configuración</a></li>
+        </ul>
+    </nav>
     <nav>
         <div>Vender</div>
         <div>Ofertas</div>
@@ -48,27 +56,23 @@
         <div>Comida</div>
         <div>Carrito</div>
     </nav>
-
     <main>
         <section class="pedido-container">
             <div class="pedido-header">
                 <h2>Historial de compras</h2>
-                <button class="btn">Regresar</button>
+                <button id="back" class="btn">Regresar</button>
             </div>
-    
             <div class="bloque">
                 <div class="bloque">
                     <p><strong>Fecha de compra:</strong> 27/04/2025</p>
                     <p><strong>ID de orden:</strong> ORD123456</p>
                     <p><strong>Total de compra:</strong> $520.00</p>
                 </div>
-    
                 <div class="bloque">
                     <p><strong>Fecha de compra:</strong> 20/04/2025</p>
                     <p><strong>ID de orden:</strong> ORD123123</p>
                     <p><strong>Total de compra:</strong> $245.00</p>
                 </div>
-    
                 <div class="bloque">
                     <p><strong>Fecha de compra:</strong> 15/04/2025</p>
                     <p><strong>ID de orden:</strong> ORD789789</p>
@@ -77,11 +81,10 @@
             </div>
         </section>
     </main>
-    
     <footer>
         © 2025 ClickBuy. Todos los derechos reservados.
     </footer>
-
+    <script src="productos-pedidos.js"></script>
+    <script src="../inicio/inicioCliente/inicioCliente.js"></script>
 </body>
-
 </html>

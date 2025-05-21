@@ -7,18 +7,21 @@
   <title>Panel de Usuario</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../inicio/inicio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../../assets/colors/colors.css">
 </head>
-
 <body>
   <header>
     <div class="logo">
-      <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy">
+      <a href="../inicio/inicioCliente/inicioCliente.html">
+        <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy">
+      </a>  
     </div>
     <div class="nav-left">
       <div class="buttons">
         <button class="btn">Dir Envío</button>
         <select>
-          <option>Filtro</option>
+          <option>Filtro ▼</option>
         </select>
       </div>
     </div>
@@ -27,13 +30,23 @@
       <button>🔍</button>
     </div>
     <div class="nav-right">
-      <div class="buttons">
-        <button class="btn">Iniciar Sesion</button>
-        <button class="btn">Registrar</button>
+      <div class="user-info">
+        <span class="client-name">
+          <i class="fa-solid fa-user"><strong>&nbsp;&nbsp;</strong></i>Cliente: <strong>&nbsp;</strong>
+        </span>
+        <button  id="btnConfig" class="btn-config">
+          <i class="fa-solid fa-gear"></i> Configuración 
+        </button>
       </div>
     </div>
   </header>
-
+    <nav id="menuDisplay" class="menuDisplay">
+    <ul class="menuNav">
+      <li class="menuList"><a class="list" href="/src/components/perfiles/perfilUsuario.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="/src/components/pedido/visualización-pedido.html">Mis pedidos</a></li>
+      <li class="menuList"><a class="list" href="">Configuración</a></li>
+    </ul>
+  </nav>
   <nav>
     <div>Vender</div>
     <div>Ofertas</div>
@@ -44,14 +57,12 @@
     <div>Comida</div>
     <div>Carrito</div>
   </nav>
-
   <main>
     <section class="pedido-container">
       <div class="pedido-header">
-        <h2>Edición de perfil</h2>
-        <button class="btn">Regresar</button>
+        <h2>Editar perfil</h2>
+        <button id="backU" class="btn">Regresar</button>
       </div>
-
       <div class="bloque">
         <h3>Información personal</h3>
         <label>Nombre:</label>
@@ -61,7 +72,6 @@
         <label>CURP:</label>
         <input type="text" class="form-input" placeholder="CURP">
       </div>
-
       <div class="bloque">
         <h3>Información de contacto</h3>
         <label>Correo electrónico:</label>
@@ -69,7 +79,6 @@
         <label>Teléfono:</label>
         <input type="tel" class="form-input" placeholder="123-456-7890">
       </div>
-
       <div class="bloque">
         <h3>Cambiar contraseña</h3>
         <label>Contraseña actual:</label>
@@ -79,23 +88,21 @@
         <label>Confirmar nueva contraseña:</label>
         <input type="password" class="form-input">
       </div>
-
       <div class="bloque">
         <h3>Imagen de perfil</h3>
         <input type="file" class="form-input" accept="image/*">
         <button class="btn" style="margin-top:10px">Actualizar foto</button>
       </div>
-
       <div class="pedido-acciones">
         <button class="btn">Aceptar</button>
         <button class="btn" style="background-color: var(--rojo); margin-left: 10px;">Cancelar</button>
       </div>
     </section>
   </main>
-
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
+  <script src="perfiles.js"></script>
+  <script src="../inicio/inicioCliente/inicioCliente.js"></script>
 </body>
-
 </html>
