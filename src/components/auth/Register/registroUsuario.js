@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('registroForm');
-  
+  const form = document.getElementById('registroForm');
+  const backIndex = document.getElementById("backIndex");
+  backIndex.addEventListener("click", ()=> {
+    if (window.history.length > 1) {
+      window.history.back();  
+    } else {
+      window.location.reload();
+    }
+  }); 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
   

@@ -4,13 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
     
     if (btnBackU) {
         btnBackU.addEventListener("click", ()=> {
-            window.location.href="../inicio/inicioCliente/inicioCliente.html";
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href="../inicio/inicioCliente/inicioCliente.html";
+            }
         });
     } else if(btnBackV) {
         btnBackV.addEventListener("click", ()=> {
-            window.location.href="../inicio/inicioVendedor/inicioVendedor.html";
-        }); 
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href="../inicio/inicioVendedor/inicioVendedor.html";
+            }
+    });
     }
-
     
 });

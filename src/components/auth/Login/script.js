@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const backIndex = document.getElementById("backIndex");
     //Función que permite regresar a index.hmtl con la flecha de regresar dentro de la pantalla login
     backIndex.addEventListener("click", ()=> {
-        window.location.href= "/index.html";
+        if (window.history.length > 1) {
+            //Permite regresar a la pagina anterior en caso encuentre 
+            window.history.back();
+        } else {
+           window.location.reload(); 
+        }
     });
     //Función que permite iniciar sesión a un usuario
     loginForm.addEventListener("submit", async function(event) {
