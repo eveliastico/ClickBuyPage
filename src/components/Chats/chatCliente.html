@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chat con Cliente</title>
+  <title>Chat con Vendedor</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
   <link rel="stylesheet" href="chat.css">
@@ -28,65 +28,66 @@
     </div>
     <div class="nav-right">
       <div class="user-info">
-        <span class="store-name">
-          <i class="fa-solid fa-store"><strong>&nbsp;&nbsp;</strong></i> Tienda: <strong>&nbsp;</strong>
+        <span class="client-name">
+          <i class="fa-solid fa-user"><strong>&nbsp;&nbsp;</strong></i>Cliente: <strong>&nbsp;</strong>
         </span>
-        <button id="btnConfig" class="btn-config" onclick="abrirModalConfig()">
-          <i class="fa-solid fa-gear"></i> Configuración
+        <button  id="btnConfig" class="btn-config" >
+          <i class="fa-solid fa-gear"></i> Configuración 
         </button>
       </div>
+    </div>
   </header>
   <nav id="menuDisplay" class="menuDisplay">
     <ul class="menuNav">
-      <li class="menuList"><a class="list" href="../perfiles/perfilVendedor.html">Mi Perfil</a></li>
-      <li class="menuList"><a class="list" href="../metodo_pago/deposito_pago.html">Metodo de Pago</a></li>
-      <li class="menuList"><a class="list" href="../Vendedor/gestion-producto.html"">Mis Productos</a></li>
-      <li class="menuList"><a class="list" href="../Vendedor/creacion-producto.html">Crear Producto</a></li>
-      <li class="menuList"><a class="list" href="../Chats/chat.html">Chatear</a></li>
+      <li class="menuList"><a class="list" href="../perfiles/perfilUsuario.html">Mi Perfil</a></li>
+      <li class="menuList"><a class="list" href="../producto/historial-producto.html">Mis pedidos</a></li>
+      <li class="menuList"><a class="list" href="../metodo_pago/metodo_pago.html">Metodo de Pago</a></li>
+      <li class="menuList"><a class="list" href="../Chats/chatCliente.html">Chatear</a></li>
     </ul>
   </nav>
   <nav class="barra-navegacion">
     <ul>
-      <li><a href="../../Vendedor/gestion-producto.html">Mis Productos</a>
-      <li><a href="../../Vendedor/">Pedidos</a></li>
-      <li><a href="#">Estadisticas</a></li>
-      <li><a href="src/components/producto/promociones.html">Reseñas</a></li>
-      <li><a href="../../Vendedor/perfil-tienda.html">Perfil Tienda</a></li>
-      <li><a href="../../Vendedor/creacion-producto.html">Crear Producto</a></li>
+      <li><a href="../../producto/ofertas.html">Ofertas</a></li>
+      <li><a href="../../producto/tiendas.html">Tiendas</a></li>
+      <li><a href="#">Categorías</a></li>
+      <li><a href="../../producto/promociones.html">Promociones</a></li>
+      <li><a href="#">Comprar de nuevo</a></li>
+      <li><a href="#">Comida</a></li>
+      <li><a href="../../producto/carrito.html">Carrito</a></li>
     </ul>
   </nav>
   <main class="chat-wrapper">
     <div class="chat-container">
-      <!-- Columna izquierda: Lista de clientes -->
+      <!-- Columna izquierda: Lista de Vendedors -->
       <aside class="chat-sidebar">
         <ul class="chat-contacts">
           <li class="chat-contact">
             <img src="../../assets/images/user1.png" alt="User" class="avatar">
-            <span class="contact-name">Cliente 1</span>
+            <span class="contact-name">Vendedor 1</span>
           </li>
           <li class="chat-contact">
             <img src="../../assets/images/user2.png" alt="User" class="avatar">
-            <span class="contact-name">Cliente 2</span>
+            <span class="contact-name">Vendedor 2</span>
           </li>
           <li class="chat-contact">
             <img src="../../assets/images/user3.png" alt="User" class="avatar">
-            <span class="contact-name">Cliente 3</span>
+            <span class="contact-name">Vendedor 3</span>
           </li>
           <li class="chat-contact">
             <img src="../../assets/images/user4.png" alt="User" class="avatar">
-            <span class="contact-name">Cliente 4</span>
+            <span class="contact-name">Vendedor 4</span>
           </li>
           <li class="chat-contact">
             <img src="../../assets/images/user5.png" alt="User" class="avatar">
-            <span class="contact-name">Cliente 5</span>
+            <span class="contact-name">Vendedor 5</span>
           </li>
         </ul>
       </aside>
       <!-- Panel del chat (derecha) -->
       <section class="chat-main">
         <div class="chat-top">
-          <h2>Chat con cliente</h2>
-          <button id="backV" class="btn">Regresar</button>
+          <h2>Chat con vendedor</h2>
+          <button id="backU" class="btn">Regresar</button>
         </div>
         <div class="chat-content">
           <div class="message received">¡Hola! Estoy interesado en tu producto.</div>
@@ -105,6 +106,6 @@
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
   <script src="chat.js"></script>
-  <script src="../inicio/inicioVendedor/inicioVendedor.js"></script>
+  <script src="../inicio/inicioCliente/inicioCliente.js"></script>
 </body>
 </html>
