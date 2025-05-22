@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     //Boton de regresar
     btnBack.addEventListener("click", ()=> {
-        window.location.href="../inicio/inicioCliente/inicioCliente.html";
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            window.location.href="../inicio/inicioCliente/inicioCliente.html";
+        }
     });
     //Funcion que permite añadir botones a los pedidos
     pedidos.forEach(pedido => {

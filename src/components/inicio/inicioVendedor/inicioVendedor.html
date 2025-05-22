@@ -50,31 +50,135 @@
       <li class="menuList"><a class="list" href="../../Chats/chat.html">Chatear</a></li>
     </ul>
   </nav>
-    <nav class="barra-navegacion">
-        <ul>
-            <li><a href="../../Vendedor/gestion-producto.html">Mis Productos</a>
-            <li><a href="../../Vendedor/">Pedidos</a></li>
-            <li><a href="#">Estadisticas</a></li>
-            <li><a href="src/components/producto/promociones.html">Reseñas</a></li>
-            <li><a href="../../Vendedor/perfil-tienda.html">Perfil Tienda</a></li>
-             <li><a href="../../Vendedor/creacion-producto.html">Crear Producto</a></li>
-          </ul>
-    </nav>
-  <div class="container">
-    <aside>Aside</aside>
-    <main>
-      <div class="slider">Panel del vendedor</div>
-      <div class="products">
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-      </div>
-    </main>
-    <aside>Aside</aside>
-  </div>
+  <nav class="barra-navegacion">
+    <ul>
+      <li><a href="../../Vendedor/gestion-producto.html">Mis Productos</a>
+      <li><a href="../../Vendedor/">Pedidos</a></li>
+      <li><a href="#">Estadisticas</a></li>
+      <li><a href="src/components/producto/promociones.html">Reseñas</a></li>
+      <li><a href="../../Vendedor/perfil-tienda.html">Perfil Tienda</a></li>
+      <li><a href="../../Vendedor/creacion-producto.html">Crear Producto</a></li>
+    </ul>
+  </nav>
+  <!--Categorias -->
+    <section class="seccion-categoria">
+        <div class="categoria-card">
+            <h3>LOOKS VIRALES</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria1/chica 1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria1/chica 2.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria1/chica 3.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria1/chica 4.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria1/chica 5.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>HOGAR</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria2/cocina.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria2/cama.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria2/micro.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria2/sillas.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria2/tv.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+    </section>
+    <!--Relacionados-->
+    <section class="relacionados">
+        <div class="relacionados-encabezado">
+            <h2>Relacionado con los artículos que viste</h2>
+            <a href="#">Ver más</a>
+        </div>
+        <div class="relacionados-scroll">
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/CPU.png" alt="Mesa 1">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/Laptop.png" alt="Mesa 2">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+        </div>
+    </section>
+    <section class="carrusel-categorias">
+        <h2>Categorías destacadas</h2>
+        <div class="contenedor-categorias">
+            <button class="flecha-categoria izquierda">&#10094;</button>
+            <div class="lista-categorias" id="listaCategorias">
+                <div class="categoria-icono">
+                    <img src="../../../assets/images/inicio/CategoriasCarrusel/electronicos.png" alt="Electrónicos">
+                    <p>Electrónicos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/moda.png" alt="Moda"></div>
+                    <p>Moda</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/hogar.png" alt="Hogar">
+                    </div>
+                    <p>Hogar</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/belleza.png" alt="Belleza">
+                    </div>
+                    <p>Belleza</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/fitness.png" alt="Fitness">
+                    </div>
+                    <p>Fitness</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/deportes.png"
+                            alt="Deportes"></div>
+                    <p>Deportes</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/comida.png" alt="Comida">
+                    </div>
+                    <p>Comida</p>
+                </div>
+            </div>
+            <button class="flecha-categoria derecha">&#10095;</button>
+        </div>
+    </section>
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>

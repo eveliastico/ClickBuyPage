@@ -1,7 +1,6 @@
 import { obtenerProductoPorId } from "../../services/productoServicio.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // Obtén el ID del producto desde la URL
     const params = new URLSearchParams(window.location.search);
     const productId = params.get("id");
 
@@ -11,11 +10,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        // Usa el ID obtenido de la URL para llamar a la API
         const respuesta = await obtenerProductoPorId(productId);
         console.log("Respuesta de la API:", respuesta);
 
-        // Accede a la propiedad `data` para obtener el producto
         const producto = await respuesta.data;
         renderizarProductos(producto);
     } catch (error) {
@@ -26,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         try {
             document.querySelector(".producto-detalle").innerHTML = `
                 <h1>${producto.nombre}</h1>
-                <img src="src/assets/images/inicio/relacionados/pantalla.png" alt="${producto.descripcion}">
+                <img src="../../assets/images/inicio/relacionados/Laptop.png" alt="${producto.descripcion}">
                 <p>${producto.descripcion}</p>
                 <p>Precio: $${producto.precio.toFixed(2)}</p>
                 <button class="btn-carrito" onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito 🛒</button>
@@ -36,3 +33,30 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 });
+
+window.abrirCarrito = function abrirCarrito() {
+    const carrito = document.getElementById("carrito");
+    carrito.classList.add("activo");
+};
+
+window.cerrarCarrito = function cerrarCarrito() {
+    const carrito = document.getElementById("carrito");
+    carrito.classList.remove("activo");
+};
+
+window.agregarAlCarrito = function agregarAlCarrito(nombre, precio) {
+    const productosCarrito = document.getElementById("productos-carrito");
+    const productoHTML = `
+        <div class="producto-carrito">
+            <p>${nombre} - $${precio.toFixed(2)}</p>
+            <button class="eliminar" onclick="eliminarProducto(this)">Eliminar</button>
+        </div>
+    `;
+    productosCarrito.insertAdjacentHTML("beforeend", productoHTML);
+    abrirCarrito();
+};
+
+window.eliminarProducto = function eliminarProducto(button) {
+    const producto = button.closest(".producto-carrito");
+    producto.remove();
+};

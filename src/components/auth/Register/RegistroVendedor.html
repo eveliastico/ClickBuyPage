@@ -20,20 +20,20 @@
     <div class="login-form">
       <h2>Crear Cuenta de Vendedor</h2>
       <form id="formRegistroVendedor">
-        <input type="text" placeholder="Nombres" required />
-        <input type="text" placeholder="Apellidos" required />
-        <input type="date" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <input type="text" placeholder="Nombre de tienda" required />
-        <input type="text" placeholder="RFC (opcional)" />
-        <input type="tel" placeholder="Teléfono de contacto" required />
-        <input type="password" placeholder="Contraseña" required />
-        <input type="password" placeholder="Confirmar contraseña" required />
+        <input type="text" id="nombres" placeholder="Nombres" required />
+        <input type="text" id="apellidos" placeholder="Apellidos" required />
+        <input type="date" id="fecha" required />
+        <input type="email" id="correo" placeholder="Correo electrónico" required />
+        <input type="text" id="tienda" placeholder="Nombre de tienda" required />
+        <input type="text" id="rfc" placeholder="RFC (opcional)" />
+        <input type="tel" id="telefono" pattern="[0-9]{10}" placeholder="Teléfono de contacto" required />
+        <input type="password" id="contraseña" placeholder="Contraseña" required />
+        <input type="password" id="contra2" placeholder="Confirmar contraseña" required />
         <button type="submit" class="btn">Registrarse como vendedor</button>
       </form>
     </div>
   </div>
 
-  <script src="registroUsuario.js"></script>
+  <script src="registroV.js" type="module"></script>
 </body>
 </html>

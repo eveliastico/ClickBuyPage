@@ -10,6 +10,13 @@ main.contenedor-ofertas {
   gap: 24px;
   padding: 20px;
 }
+.grid-categorias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /*grid-auto-flow: column;*/
+  gap: 2rem;
+  padding: 10px;
+}
 
 /* Producto estilo tarjeta */
 .producto {
