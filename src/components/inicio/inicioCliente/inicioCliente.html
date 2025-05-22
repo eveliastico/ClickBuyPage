@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../../../assets/colors/colors.css">
   <link rel="stylesheet" href="../inicio.css">
-  <!--<script src="/src/components/auth/auth.js"></script> Este codigo debe descomentarse cuando ya se haga la conexión con el backend para obtener el token-->
+  <!--<script src="/../../../components/auth/auth.js"></script> Este codigo debe descomentarse cuando ya se haga la conexión con el backend para obtener el token-->
 </head>
 <body>
   <header>
@@ -59,25 +59,145 @@
       <li><a href="../../producto/carrito.html">Carrito</a></li>
     </ul>
   </nav>
-  <div class="container">
-    <aside>Aside</aside>
-    <main>
-      <div class="slider">Slide con productos</div>
-      <div class="products">
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-        <div class="product-card"></div>
-      </div>
-    </main>
-    <aside>Aside</aside>
-  </div>
-
+<!--OFERTAS DEL DIA-->
+    <section class="seccion-productos" style="position: relative;">
+        <div class="encabezado-ofertas">
+            <h2>🔥 Ofertas del día</h2>
+            <span id="reloj">TIEMPO RESTANTE: --:--:--</span>
+        </div>
+        <div class="contenedor-cards scroll-carrusel" id="carrusel">
+            
+        </div>
+        <button class="flecha-derecha" onclick="moverCarrusel()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <button class="flecha-izquierda" onclick="retrocederCarrusel()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+    </section>
+    <!--Categorias -->
+    <section class="seccion-categoria">
+        <div class="categoria-card">
+            <h3>LOOKS VIRALES</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria1/chica 1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria1/chica 2.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria1/chica 3.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria1/chica 4.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria1/chica 5.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>HOGAR</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria2/cocina.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria2/cama.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria2/micro.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria2/sillas.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria2/tv.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+        <div class="categoria-card">
+            <h3>DEPORTES Y FITNESS</h3>
+            <img class="banner" src="../../../assets/images/inicio/Categoria3/deporte1.png" class="img-banner"
+                alt="Looks Virales">
+            <div class="mini-productos">
+                <img src="../../../assets/images/inicio/Categoria3/pesas.png" alt="Look 1">
+                <img src="../../../assets/images/inicio/Categoria3/pesasdeporte.png" alt="Look 2">
+                <img src="../../../assets/images/inicio/Categoria3/tapete.png" alt="Look 3">
+                <img src="../../../assets/images/inicio/Categoria3/bci.png" alt="Look 4">
+            </div>
+        </div>
+    </section>
+    <!--Relacionados-->
+    <section class="relacionados">
+        <div class="relacionados-encabezado">
+            <h2>Relacionado con los artículos que viste</h2>
+            <a href="#">Ver más</a>
+        </div>
+        <div class="relacionados-scroll">
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/CPU.png" alt="Mesa 1">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/Laptop.png" alt="Mesa 2">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+            <div class="item-relacionado">
+                <img src="../../../assets/images/inicio/relacionados/pantalla.png" alt="Mesa 3">
+            </div>
+        </div>
+    </section>
+    <section class="carrusel-categorias">
+        <h2>Categorías destacadas</h2>
+        <div class="contenedor-categorias">
+            <button class="flecha-categoria izquierda">&#10094;</button>
+            <div class="lista-categorias" id="listaCategorias">
+                <div class="categoria-icono">
+                    <img src="../../../assets/images/inicio/CategoriasCarrusel/electronicos.png" alt="Electrónicos">
+                    <p>Electrónicos</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/moda.png" alt="Moda"></div>
+                    <p>Moda</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/hogar.png" alt="Hogar">
+                    </div>
+                    <p>Hogar</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/belleza.png" alt="Belleza">
+                    </div>
+                    <p>Belleza</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/fitness.png" alt="Fitness">
+                    </div>
+                    <p>Fitness</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/deportes.png"
+                            alt="Deportes"></div>
+                    <p>Deportes</p>
+                </div>
+                <div class="categoria-item">
+                    <div class="icono"><img src="../../../assets/images/inicio/CategoriasCarrusel/comida.png" alt="Comida">
+                    </div>
+                    <p>Comida</p>
+                </div>
+            </div>
+            <button class="flecha-categoria derecha">&#10095;</button>
+        </div>
+    </section>
   <footer>
     © 2025 ClickBuy. Todos los derechos reservados.
   </footer>
+  <script src="../../../components/producto/funcionesCarrito.js"></script>
   <script src="inicioCliente.js"></script>
 </body>
 </html>
