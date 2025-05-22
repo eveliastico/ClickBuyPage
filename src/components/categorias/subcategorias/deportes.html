@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deportes</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../inicio/inicio.css" />
+  <link rel="stylesheet" href="../../../assets/colors/colors.css" />
+  <link rel="stylesheet" href="../../producto/productos-cliente.css" />
+  <script src="../../producto/funcionesCarrito.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../assets/images/ClickBuy.png" alt="Logo ClickBuy" width="120" />
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro ▼</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador" />
+      <button id="searchButton" style="background-color: var(--amarillo)">🔍</button>
+    </div>
+
+    <div class="nav-right">
+      <div class="buttons">
+        <button onclick="location.href='../../auth/Login/login.html'" class="btn">Iniciar Sesión</button>
+        <button onclick="location.href='../../auth/Register/registroUsuario.html'" class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="barra-navegacion">
+    <ul>
+      <li><a href="../producto/ofertas.html">Ofertas</a></li>
+      <li><a href="../producto/tiendas.html">Tiendas</a></li>
+      <li><a href="../categorias/categorias.html">Categorías</a></li>
+      <li><a href="../producto/promociones.html">Promociones</a></li>
+      <li><a href="#">Comprar de nuevo</a></li>
+      <li><a href="#">Comida</a></li>
+      <li><a href="../producto/carrito.html">Carrito</a></li>
+    </ul>
+  </nav>
+  <h1 class="titulo-seccion">Deportes</h1>
+
+  <main class="contenedor-ofertas">
+  <section class="grid-productos">
+    <!-- Aquí JS insertará los productos -->
+  </section>
+</main>
+
+  <footer class="footer">
+    <p>© 2025 ClickBuy. Todos los derechos reservados.</p>
+  </footer>
+    <script src="../subcategorias/subcategorias.js"></script>
+</body>
+
+</html>
