@@ -1,0 +1,100 @@
+main.contenedor-ofertas {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 20px;
+}
+
+/* Producto estilo tarjeta */
+.producto {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.producto .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.producto h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--azulOscuro);
+  margin: 0;
+}
+
+.descripcion {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+.precio-anterior {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.precio-descuento {
+  color: green;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin: 4px 0;
+}
+
+.descuento {
+  color: #00a650;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+
+.calificacion {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #333;
+}
+
+.btn-carrito {
+  background-color: var(--amarillo);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-carrito:hover {
+  background-color: #ffc107;
+}

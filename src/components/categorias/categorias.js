@@ -1,21 +1,57 @@
 const categorias = [
-  { id: 1, nombre: "Electrónica", descripcion: "Productos tecnológicos, gadgets y más." },
-  { id: 2, nombre: "Hogar", descripcion: "Artículos para el hogar y decoración." },
-  { id: 3, nombre: "Ropa", descripcion: "Moda para todas las edades y estilos." },
-  { id: 4, nombre: "Libros", descripcion: "Lecturas para todos los gustos." },
-  { id: 5, nombre: "Juguetes", descripcion: "Juegos y diversión para niños." }
+  {
+    nombre: "Electrónica",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/electronicos.png"
+
+  },
+  {
+    nombre: "Hogar",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/hogar.png"
+  },
+  {
+    nombre: "Belleza",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/belleza.png"
+  },
+  {
+    nombre: "Fitness",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/fitness.png"
+  },
+  {
+    nombre: "Moda",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/moda.png"
+  },
+  {
+    nombre: "Deportes",
+    imagen: "../../assets/images/inicio/CategoriasCarrusel/deportes.png"
+  }
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  const tabla = document.getElementById("categorias-table");
+  const contenedor = document.getElementById("categorias-container");
 
   categorias.forEach(categoria => {
-    const fila = document.createElement("tr");
-    fila.innerHTML = `
-      <td style="padding: 10px; border: 1px solid #ccc;">${categoria.id}</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">${categoria.nombre}</td>
-      <td style="padding: 10px; border: 1px solid #ccc;">${categoria.descripcion}</td>
+    const item = document.createElement("div");
+    item.className = "categoria-item";
+
+    item.innerHTML = `
+      <div class="icono-circulo">
+        <img src="${categoria.imagen}" alt="${categoria.nombre}" />
+      </div>
+      <p class="nombre-categoria">${categoria.nombre}</p>
     `;
-    tabla.appendChild(fila);
+
+    // Genera nombre del archivo y redirige
+    const archivo = categoria.nombre
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "") + ".html";
+
+    item.addEventListener("click", () => {
+      window.location.href = `./subcategorias/${archivo}`;
+    });
+
+    contenedor.appendChild(item);
   });
 });
+
