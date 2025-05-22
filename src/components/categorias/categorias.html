@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@900&family=Roboto:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="src/components/inicio/inicio.css">
+  <link rel="stylesheet" href="src/assets/colors/colors.css">
+  <script defer src="src/components/categorias/categorias.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="src/assets/images/ClickBuy.png" alt="Logo ClickBuy" width="120">
+    </div>
+    <div class="nav-left">
+      <div class="buttons">
+        <button class="btn">Dir Envío</button>
+        <select>
+          <option>Filtro ▼</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Buscador">
+      <button id="searchButton" style="background-color: var(--amarillo);">🔍</button>
+    </div>
+    <div class="nav-right">
+      <div class="buttons">
+        <button onclick="location.href='src/components/auth/Login/login.html'" class="btn">Iniciar Sesión</button>
+        <button onclick="location.href='src/components/auth/Register/registroUsuario.html'" class="btn">Registrar</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div>Vender</div>
+    <div>Ofertas</div>
+    <div>Tiendas</div>
+    <div style="font-weight: bold;">Categorías</div>
+    <div>Promociones</div>
+    <div>Comprar de nuevo</div>
+    <div>Comida</div>
+    <div>Carrito</div>
+  </nav>
+
+  <div class="container">
+    <aside>Aside</aside>
+    <main>
+      <section class="categorias-section">
+        <h2 style="margin: 20px 0; font-size: 24px;">Categorías disponibles</h2>
+        <div class="tabla-categorias" style="overflow-x: auto;">
+          <table id="categorias-table" style="width: 100%; border-collapse: collapse;">
+            <thead style="background-color: var(--amarillo); color: #000;">
+              <tr>
+                <th style="padding: 10px; border: 1px solid #ccc;">ID</th>
+                <th style="padding: 10px; border: 1px solid #ccc;">Nombre</th>
+                <th style="padding: 10px; border: 1px solid #ccc;">Descripción</th>
+              </tr>
+            </thead>
+            <tbody> <!-- Aquí se insertan dinámicamente las filas con JS --> </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <aside>Aside</aside>
+  </div>
+
+  <footer>
+    Footer
+  </footer>
+</body>
+
+</html>
